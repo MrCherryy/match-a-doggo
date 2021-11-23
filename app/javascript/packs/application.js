@@ -23,8 +23,10 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { openSearchInput } from "../components/search.js"
 
 document.addEventListener('turbolinks:load', () => {
+  openSearchInput();
   // Call your functions here, e.g:
   // initSelect2();
 });
