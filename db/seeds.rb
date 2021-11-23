@@ -14,4 +14,4 @@ User.all
 puts "#{user2} has been created"
 
 Dog.create!(name: 'Lola', breed: 'husky', gender: 'female', pedigree: true, address: 'Via Col Di lana 6, Milan',
-            user: user2, matchable: true, birthdate: '14/04/17')
+            user: user2, matchable: true, birthdate: '2017/04/14')
