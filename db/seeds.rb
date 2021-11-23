@@ -5,3 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Dog.destroy_all
+puts 'All the dogs were destroyed'
+User.destroy_all
+puts 'All registered users have been destroyed'
+user1 = User.create(nickname: 'user1', email: 'user1@email.com', password: '123123')
+user2 = User.create(nickname: 'user2', email: 'user2@email.com', password: '123123')
+user3 = User.create(nickname: 'user3', email: 'user3@email.com', password: '123123')
+user4 = User.create(nickname: 'user4', email: 'user4@email.com', password: '123123')
+user5 = User.create(nickname: 'user5', email: 'user5@email.com', password: '123123')
+User.all
+
+Dog.create!(name: 'Lola', breed: 'husky', gender: 'female', pedigree: true, address: 'Via Col Di lana 6, Milan',
+            user: user1, matchable: true, birthdate: '2021/09/17')
+Dog.create!(name: 'Lucky', breed: 'husky', gender: 'male', pedigree: true, address: 'Viale Brenta 10, Milan',
+            user: user2, matchable: true, birthdate: '2021/08/17')
+Dog.create!(name: 'Charlie', breed: 'husky', gender: 'male', pedigree: true, address: 'Corso Lodi 15, Milan',
+            user: user3, matchable: false, birthdate: '2021/07/17')
+Dog.create!(name: 'Leo', breed: 'husky', gender: 'male', pedigree: true, address: 'Via Eugenio Vania 2, Milan',
+            user: user4, matchable: true, birthdate: '2021/05/17')
+Dog.create!(name: 'Oliver', breed: 'husky', gender: 'male', pedigree: true, address: 'Piazzale Cantore 4, Milan',
+            user: user5, matchable: true, birthdate: '2021/06/17')
+
+Match.create!(status: 'pending', female_dog_id: '1', male_dog_id: '2')

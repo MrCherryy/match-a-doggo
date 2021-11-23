@@ -1,1 +1,45 @@
 // Specific CSS for your home-page
+.banner {
+  text-align: left;
+  padding: 45px 85px;
+
+  h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  }
+
+  p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  position: center;
+  text-align: center;
+  padding: 8px;
+  }
+}
+
+
+
+#bg_home {
+  background-image: asset-url('img2.png');
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#btn_landing {
+  margin: 0 auto;
+  width: fit-content;
+  .btn_start {
+    color: white;
+    padding: 12px 32px;
+    background: rgba(243, 191, 93, 1);
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+  }
+}
