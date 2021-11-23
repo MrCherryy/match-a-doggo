@@ -5,11 +5,14 @@
   <li>Name: <%= @dog.name %></li>
   <li>Breed: <%= @dog.breed %></li>
   <li>Date of birth: <%= @dog.birthdate %></li>
-  <li>Age: <%= ((Time.zone.now - @dog.birthdate.to_time) / 1.year.seconds).floor %></li>
+  <li>Age: <%= @dog.age[:year] %> years and <%= @dog.age[:month] %> months</li>
   <li>Gender: <%= @dog.gender %></li>
   <li>Pedigree: <%= @dog.pedigree %></li>
   <li>Address: <%= @dog.address %></li>
   <li>Matchable: <%= @dog.matchable %></li>
 </ul>
+<% if @dog.matchable %>
+  <%= link_to Match, '#', class: 'btn btn-outline-primary' %>
+<% end %>
 <br>
 <%= link_to raw('<i class="fas fa-chevron-left"></i>'), dogs_path, class: 'btn btn-outline-primary' %>
