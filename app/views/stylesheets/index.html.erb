@@ -1,0 +1,31 @@
+<div class="main-index">
+  <div class="banner-title">
+    <h1>Match-a-doggo</h1>
+    <p>We take care of your dogs bla blu bli</p>
+  </div>
+  <div class="search-container">
+    <%# <input type="text" placeholder="Enter your postal code"> %>
+    <%= form_tag index_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        id: "search_form",
+        class: "input",
+        placeholder: "what are you looking for?"
+        %>
+    <% end %>
+    <div class="search">
+    </div>
+    </div>
+  </div>
+
+  <div class="dogs-container">
+    <div class="dogs-cards">
+      <div class="dog-card">
+        <img src="" alt="John" style="width:100%">
+        <h1 class="dog-name">Dog Name</h1>
+        <p class="breed-title">breed</p>
+        <p class="age">age</p>
+      </div>
+    </div>
+  </div>
+</div>
