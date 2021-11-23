@@ -1,2 +1,15 @@
 <h1>Dogs#show</h1>
 <p>Find me in app/views/dogs/show.html.erb</p>
+
+<ul>
+  <li>Name: <%= @dog.name %></li>
+  <li>Breed: <%= @dog.breed %></li>
+  <li>Date of birth: <%= @dog.birthdate %></li>
+  <li>Age: <%= ((Time.zone.now - @dog.birthdate.to_time) / 1.year.seconds).floor %></li>
+  <li>Gender: <%= @dog.gender %></li>
+  <li>Pedigree: <%= @dog.pedigree %></li>
+  <li>Address: <%= @dog.address %></li>
+  <li>Matchable: <%= @dog.matchable %></li>
+</ul>
+<br>
+<%= link_to raw('<i class="fas fa-chevron-left"></i>'), dogs_path, class: 'btn btn-outline-primary' %>
