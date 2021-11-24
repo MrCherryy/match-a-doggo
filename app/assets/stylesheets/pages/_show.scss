@@ -1,7 +1,5 @@
 .card-img-show {
   background-position: center;
-  background-image: url(https://i.natgeofe.com/n/3faa2b6a-f351-4995-8fff-36d145116882/domestic-dog_16x9.jpg);
-  background-position-x: -112px;
   height: 60vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,7 +14,6 @@
 .dog-description {
   margin: 10px 20px;
   text-align: center;
-  padding-bottom: 20px;
 }
 
 .basic-dog-info {
@@ -28,8 +25,8 @@
 .match-buttons {
   font-size: 40px;
   position: absolute;
-  top: 371px;
-  right: 25px;
+  top: 50%;
+  right: 8%;
   a:hover {
     text-decoration: none !important;
   }
@@ -48,4 +45,8 @@
   :hover {
     color: red !important;
   }
+}
+
+.dog-card-show {
+  margin-bottom: 90px;
 }

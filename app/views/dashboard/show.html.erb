@@ -1,0 +1,33 @@
+<h1>Dashboard#show</h1>
+<p>Find me in app/views/dashboard/show.html.erb</p>
+<div>
+  <div class="container"><h1>Profile</h1></div>
+  <br>
+  <div class="container">
+    <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+    <div>
+      <h2><%= @user.nickname %></h2>
+      <h3><%= @user.email %></h3>
+    </div>
+  </div>
+</div>
+<br>
+<%= link_to raw("<div class='container'>
+  <div class='card-product'>
+    <div class='card-product-infos'>
+      <h3>My doggos</h3>
+      <p>You have #{@dogs.count} doggos currently in your page.</p>
+    </div>
+  </div>
+</div>"), dogs_profile_path(@user) %>
+
+
+<br>
+<%= link_to raw("<div class='container'>
+  <div class='card-product'>
+    <div class='card-product-infos'>
+      <h3>My requests</h3>
+      <p>You have #{@requests.count} dogs currently matched.</p>
+    </div>
+  </div>
+</div>"), requests_profile_path %>

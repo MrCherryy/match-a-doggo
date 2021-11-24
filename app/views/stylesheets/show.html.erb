@@ -1,5 +1,5 @@
 <div class="dog-card-show">
-  <div class="card-img-show">
+  <div class="card-img-show", style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)), url('<%= cl_image_path(@dog.photo.key)%>')">
     <div class="match-buttons">
       <%= link_to "#", class: "r-match" do %>
         <i class="fas fa-times-circle"></i>
@@ -11,10 +11,13 @@
   </div>
   <div class="card-description-show">
     <div class="basic-dog-info">
-      <h2>Dog Name</h2>
-      <h5>address :</h5>
-      <h5>Breed :</h5>
-      <h5>age :</h5>
+      <h2><%= @dog.name %></h2>
+      <h5>Address: <%= @dog.address %></h5>
+      <h5>Breed: <%= @dog.breed %></h5>
+      <h5>Age: <%= @dog.age[:year] %> years and <%= @dog.age[:month] %> months</h5>
+      <h5>Pedigree: <%= @dog.pedigree %></h5>
+      <h5>Gender: <%= @dog.gender %></h5>
+
     </div>
     <div class="dog-description">
       <p>Dogs are generally much better at conserving heat than at cooling themselves.

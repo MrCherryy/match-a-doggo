@@ -1,8 +1,14 @@
 .dog-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  width: auto;
-  text-align: center;
-  background-color: lightblue;
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
+.dog-name {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
 }
