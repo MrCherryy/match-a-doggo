@@ -46,4 +46,4 @@ dog = Dog.new(name: 'Oliver', breed: 'husky', gender: 'male', pedigree: true, ad
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-Match.create!(status: 'pending', female_dog_id: '1', male_dog_id: '2')
+Match.create!(status: 'pending', matching_dog_id: '1', matched_dog_id: '2')
