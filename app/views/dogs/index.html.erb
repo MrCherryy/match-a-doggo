@@ -5,3 +5,8 @@
     <li><%= link_to d.name, dog_path(d) %></li>
   <% end %>
 </ul>
+
+
+<% if current_user  %>
+  <%= link_to("go to profile page", edit_user_registration_path)  %>
+<% end %>
