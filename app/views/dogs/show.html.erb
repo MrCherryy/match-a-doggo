@@ -10,13 +10,10 @@
   <li>Gender: <%= @dog.gender %></li>
   <li>Pedigree: <%= @dog.pedigree %></li>
   <li>Address: <%= @dog.address %></li>
-  <li>Matchable: <%= @dog.matchable %></li>
 </ul>
-<% if @dog.matchable %>
-  <%= link_to Match, '#', class: 'btn btn-outline-primary', method: :post, params: {status: Match::STATUS[0]}%>
-  <% else %>
-  <%= link_to UnMatch, '#', class: 'btn btn-outline-primary', method: :post, params: {status: Match::STATUS[2]}%>
-<% end %>
-<br>
+
+<%= link_to "Match",  dog_matches_path(authenticity_token: form_authenticity_token, dog_id: @dog.id,  match: { male_dog_id: current_user.dogs.first, female_dog_id: @dog.id, status: Match::STATUS[0]}), class: 'btn btn-outline-primary', method: :post%>
+<%= link_to "Unmatch",  dog_matches_path(authenticity_token: form_authenticity_token, dog_id: @dog.id,  match: { male_dog_id: current_user.dogs.first, female_dog_id: @dog.id, status: Match::STATUS[2]}), class: 'btn btn-outline-primary', method: :post%>
+
 <%= link_to raw('<i class="fas fa-chevron-left"></i>'), dogs_path, class: 'btn btn-outline-primary' %>
 <%= link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(@dog), method: :delete, class: 'btn btn-outline-danger btn-sm m-3' %>
