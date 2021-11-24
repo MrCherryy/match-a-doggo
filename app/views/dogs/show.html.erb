@@ -17,3 +17,4 @@
 <% end %>
 <br>
 <%= link_to raw('<i class="fas fa-chevron-left"></i>'), dogs_path, class: 'btn btn-outline-primary' %>
+<%= link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(@dog), method: :delete, class: 'btn btn-outline-danger btn-sm m-3' %>
