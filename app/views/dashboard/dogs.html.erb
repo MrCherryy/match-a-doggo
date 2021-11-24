@@ -1,0 +1,27 @@
+<h1>Dashboard#dogs</h1>
+<p>Find me in app/views/dashboard/dogs.html.erb</p>
+
+<div>
+  <%= link_to raw('<i class="fas fa-chevron-left"></i>'), profile_path(@user), class: 'btn btn-outline-primary' %>
+  <div class="container"><h1>My dogs</h1></div>
+</div>
+<br>
+<div class="container">
+  <% @dogs.each do |d| %>
+    <%= link_to raw("<div>
+      #{cl_image_tag d.photo.key}
+      <div class='card-product-infos'>
+        <p>Name: #{d.name}</p>
+        <p>Breed: #{d.breed}</p>
+        <p>Age: #{d.age[:year]} years and #{d.age[:month]} months</p>
+        <p>Gender: #{d.gender}</p>
+        <p>Pedigree: #{d.pedigree}</p>
+        <p>Address: #{d.address}</p>
+        <p>Matchable: #{d.matchable}</p>
+      </div>
+    </div>"), dog_path(d) %>
+    <%= link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(d), method: :delete, data: { confirm: "Remove #{d.name}?" }, class: 'btn btn-danger btn-sm' %>
+  <% end %>
+</div>
+
+<%= link_to "+ add a dog", new_dog_path, class: "btn btn-primary" %>
