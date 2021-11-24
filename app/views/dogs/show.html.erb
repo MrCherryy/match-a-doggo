@@ -2,6 +2,7 @@
 <p>Find me in app/views/dogs/show.html.erb</p>
 
 <ul>
+  <%= cl_image_tag @dog.photo.key, height: 300, width: 400, crop: :fill %>
   <li>Name: <%= @dog.name %></li>
   <li>Breed: <%= @dog.breed %></li>
   <li>Date of birth: <%= @dog.birthdate %></li>
