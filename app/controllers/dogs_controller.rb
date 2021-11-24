@@ -1,6 +1,6 @@
 class DogsController < ApplicationController
   def index
-    @dogs = Dog.all
+    current_user.dogs.first.gender
   end
 
   def show

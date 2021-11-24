@@ -5,6 +5,6 @@ class Match < ApplicationRecord
   STATUS = %w[pending accepted denied]
   validates :status, presence: true, inclusion: { in: STATUS }
   def pending?
-    self.status == 'pending'
+    status
   end
 end

@@ -7,9 +7,19 @@ class Dog < ApplicationRecord
   validates :gender, presence: true, inclusion: { in: GENDER }
   validates :name, :photo, :breed, :birthdate, :pedigree, :address, presence: true
 
+  GENDER = %w[male female]
+
+  # simple form per scegliere il gender
+  # <%= simple_form_for do |f| %>
+  # <%= f.select Dog::GENDER %>
+
   def age
     year = ((Time.zone.now - birthdate.to_time) / 1.year.seconds).floor
     month = ((Time.zone.now - birthdate.to_time) / 1.month.seconds).floor - (year * 12)
     { year: year, month: month }
+  end
+
+  def self.of_gender(gender)
+    Dog.where(gender: gender)
   end
 end
