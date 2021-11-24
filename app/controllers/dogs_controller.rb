@@ -1,7 +1,8 @@
 class DogsController < ApplicationController
   def index
-    @dogs = Dog.all
-    # current_user.dogs.first.gender
+    my_gender = current_user.dogs.first.gender
+    user_id = current_user
+    @dogs = Dog.filter_all(my_gender, user_id)
   end
 
   def show
