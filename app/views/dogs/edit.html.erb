@@ -1,0 +1,6 @@
+<%= simple_form_for @dog do |f| %>
+  <%= f.input :address %>
+   <%= f.submit 'Update Address', class: 'btn btn-primary btn-sm'  %>
+<% end %>
+<br>
+<%= link_to raw('<i class="fas fa-chevron-left"></i>'), '#', class: 'btn btn-outline-primary' %> <%# profile_path(@user) %>
