@@ -12,7 +12,8 @@
   <li>Matchable: <%= @dog.matchable %></li>
 </ul>
 <% if @dog.matchable %>
-  <%= link_to Match, '#', class: 'btn btn-outline-primary' %>
+  <%= link_to Match, '#', class: 'btn btn-outline-primary', method: :post, params: {status: Match::STATUS[0]}%>
+  <%= link_to UnMatch, '#', class: 'btn btn-outline-primary', method: :post, params: {status: Match::STATUS[2]}%>
 <% end %>
 <br>
 <%= link_to raw('<i class="fas fa-chevron-left"></i>'), dogs_path, class: 'btn btn-outline-primary' %>
