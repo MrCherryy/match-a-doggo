@@ -9,7 +9,7 @@ class Dog < ApplicationRecord
 
   def age
     year = ((Time.zone.now - birthdate.to_time) / 1.year.seconds).floor
-    month = ((Time.zone.now - year - birthdate.to_time) / 1.month.seconds).floor
+    month = ((Time.zone.now - birthdate.to_time) / 1.month.seconds).floor - (year * 12)
     { year: year, month: month }
   end
 end
