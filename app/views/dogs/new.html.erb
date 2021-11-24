@@ -5,7 +5,7 @@
 <%= simple_form_for @dog do |f| %>
   <%= f.input :name %>
   <%= f.input :breed %>
-  <%= f.select Dog::GENDER %>
+  <%= f.select :gender, Dog::GENDER %>
   <%= f.input :birthdate %>
   <%= f.input :pedigree %>
   <%= f.input :address %>

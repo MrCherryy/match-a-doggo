@@ -2,6 +2,7 @@ class Dog < ApplicationRecord
   belongs_to :user
   has_many :matches
   has_one_attached :photo
+  before_save :default_matchable
 
   GENDER = %w[female male]
   validates :gender, presence: true, inclusion: { in: GENDER }
@@ -15,5 +16,9 @@ class Dog < ApplicationRecord
 
   def self.of_gender(gender)
     Dog.where(gender: gender)
+  end
+
+  def default_matchable
+    self.matchable = true if matchable.nil?
   end
 end

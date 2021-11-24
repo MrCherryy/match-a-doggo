@@ -14,6 +14,7 @@
 </ul>
 <% if @dog.matchable %>
   <%= link_to Match, '#', class: 'btn btn-outline-primary', method: :post, params: {status: Match::STATUS[0]}%>
+  <% else %>
   <%= link_to UnMatch, '#', class: 'btn btn-outline-primary', method: :post, params: {status: Match::STATUS[2]}%>
 <% end %>
 <br>
