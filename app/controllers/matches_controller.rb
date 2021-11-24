@@ -55,6 +55,6 @@ class MatchesController < ApplicationController
   private
 
   def match_params
-    params.require(:match).permit(:male_dog_id, :female_dog_id, :status)
+    params.require(:match).permit(:matching_dog_id, :matched_dog_id, :status)
   end
 end
