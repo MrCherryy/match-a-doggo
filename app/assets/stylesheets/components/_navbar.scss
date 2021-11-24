@@ -1,15 +1,33 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-  bottom: 0px;
+.bottom-bar {
+  background-color: white;
   position: sticky;
+  bottom: 0px;
   width: 100vw;
+  height: 50px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.nav-icon {
+  justify-content: space-around;
+  display: flex;
+  font-size: 34px;
 }
 
-.navbar-lewagon .navbar-brand img {
+.middle-icon {
+  width: 60px;
+  height: 60px;
+  background: red;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px
+}
+
+.avatar-user {
+  vertical-align: middle;
   width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
