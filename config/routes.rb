@@ -2,11 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :dogs do
-    resources :matches, only: :create
-  end
+  resources :dogs
 
-  resources :matches, only: :index
+  resources :matches, only: [:index, :create]
 
   # routes for styleguides DO NOT TOUCH
   get "/stylesheets/dogs/index", to: "stylesheets#index", as: :index

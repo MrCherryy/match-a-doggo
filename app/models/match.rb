@@ -7,4 +7,5 @@ class Match < ApplicationRecord
   def pending?
     status
   end
+
 end
