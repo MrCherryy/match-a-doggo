@@ -1,7 +1,7 @@
 class DogsController < ApplicationController
   def index
-    @dogs = Dog.all
-    # current_user.dogs.first.gender
+    my_gender = current_user.dogs.first.gender
+    @dogs = Dog.not_of_gender(my_gender)
   end
 
   def show

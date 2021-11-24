@@ -14,11 +14,15 @@ class Dog < ApplicationRecord
     { year: year, month: month }
   end
 
-  def self.of_gender(gender)
-    Dog.where(gender: gender)
+  def self.not_of_gender(gender)
+    Dog.where.not(gender: gender)
   end
 
   def default_matchable
     self.matchable = true if matchable.nil?
+  end
+
+  def self.filter_dog
+
   end
 end
