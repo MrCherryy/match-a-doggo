@@ -1,0 +1,17 @@
+<div style="background-color: white;">
+
+  <div class="container text-center"><h1>Add new doggo</h1></div>
+</div>
+<div class="container bg-light col-6">
+<%= simple_form_for @dog do |f| %>
+  <%= f.input :name %>
+  <%= f.input :breed %>
+  <%= f.input :gender %>
+  <%= f.input :birthdate %>
+  <%= f.input :pedigree %>
+  <%= f.input :address %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class: 'btn btn-primary btn-sm'  %>
+<% end %>
+</div>
+<%= link_to raw('<i class="fas fa-chevron-left"></i>'), '#', class: 'btn btn-outline-primary' %> <%# profile_path(@user) %>
