@@ -23,14 +23,15 @@ class DogsController < ApplicationController
     end
   end
 
-  # def edit
-  #   @dog = Dog.find(params[:id])
-  # end
+  def edit
+    @dog = Dog.find(params[:id])
+  end
 
-  # def update
-  #   @dog = Dog.find(params[:id])
-  #   @dog.update(params[dog])
-  # end
+  def update
+    @dog = Dog.find(params[:id])
+    @dog.update(dog_params)
+    redirect_to dog_path(@dog)
+  end
 
   def destroy
     @user = current_user
