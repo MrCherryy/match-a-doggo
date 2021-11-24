@@ -16,6 +16,7 @@
 .dog-description {
   margin: 10px 20px;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .basic-dog-info {
@@ -28,7 +29,7 @@
   font-size: 40px;
   position: absolute;
   top: 371px;
-  left: 25px;
+  right: 25px;
   a:hover {
     text-decoration: none !important;
   }
@@ -36,9 +37,9 @@
 }
 
 .a-match {
-  color: lightgreen;
+  color: green;
   :hover {
-    color: lightgreen !important;
+    color: green !important;
   }
 }
 
