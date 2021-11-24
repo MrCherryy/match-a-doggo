@@ -5,7 +5,7 @@
 <%= simple_form_for @dog do |f| %>
   <%= f.input :name %>
   <%= f.input :breed %>
-  <%= f.input :gender, collection: [['female', 'female'], ['male', 'male']], label_method: :second, value_method: :first  %>
+  <%= f.select Dog::GENDER %>
   <%= f.input :birthdate %>
   <%= f.input :pedigree %>
   <%= f.input :address %>
