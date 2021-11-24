@@ -1,6 +1,6 @@
 class Dog < ApplicationRecord
   belongs_to :user
-  has_many :matches
+  has_many :messages
   has_one_attached :photo
   before_save :default_matchable
 
@@ -20,5 +20,9 @@ class Dog < ApplicationRecord
 
   def default_matchable
     self.matchable = true if matchable.nil?
+  end
+
+  def matches
+    Match.where(matching_dog_id: id).or(Match.where(matched_dog_id: id))
   end
 end

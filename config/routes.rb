@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  
+  resources :dogs
 
-  resources :dogs do
-    resources :matches, only: [:index, :create]
-  end
+  resources :matches, only: [:index, :create]
 
   # resources :matches, only: :index
 

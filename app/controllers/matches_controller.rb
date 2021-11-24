@@ -1,7 +1,7 @@
 class MatchesController < ApplicationController
 
   def index
-    @matches = Match.all
+    @matches = current_user.dogs.first.matches
   end
 
   # def new
@@ -10,15 +10,11 @@ class MatchesController < ApplicationController
   # end
 
   def create
-    @dog = Dog.find(params[:dog_id])
     @match = Match.new(match_params)
-    @match.user = current_user
-    @match.dog = @dog
-    @match.status = Match::STATUS[1]
     if @match.save
-      redirect_to dog_path(@dog)
+      redirect_to matches_path
     else
-      render :new
+      redirect_to dog_path(@match.matched_dog)
     end
 
   end
@@ -55,6 +51,6 @@ class MatchesController < ApplicationController
   private
 
   def match_params
-    params.require(:match).permit(:male_dog_id, :female_dog_id, :status)
+    params.require(:match).permit(:matching_dog_id, :matched_dog_id, :status)
   end
 end

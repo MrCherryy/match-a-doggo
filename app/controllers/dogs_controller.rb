@@ -7,6 +7,7 @@ class DogsController < ApplicationController
 
   def show
     @dog = Dog.find(params[:id])
+    @match = Match.new
   end
 
   def new

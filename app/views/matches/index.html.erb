@@ -1,6 +1,8 @@
 <h1>Matches#index</h1>
 <p>Find me in app/views/matches/index.html.erb</p>
 
-<h1>
-<%= current_user.dogs.first.name  %>
-</h1>
+<% @matches.each do |match| %>
+  <div>
+    <p>i'm<%= match.matching_dog.name %> and i'm <%= match.status %> to match <%= match.matched_dog.name %></p>
+  </div>
+<% end %>

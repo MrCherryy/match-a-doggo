@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_104519) do
+ActiveRecord::Schema.define(version: 2021_11_24_181343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,12 +59,12 @@ ActiveRecord::Schema.define(version: 2021_11_24_104519) do
 
   create_table "matches", force: :cascade do |t|
     t.string "status"
-    t.bigint "male_dog_id", null: false
-    t.bigint "female_dog_id", null: false
+    t.bigint "matched_dog_id", null: false
+    t.bigint "matching_dog_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["female_dog_id"], name: "index_matches_on_female_dog_id"
-    t.index ["male_dog_id"], name: "index_matches_on_male_dog_id"
+    t.index ["matched_dog_id"], name: "index_matches_on_matched_dog_id"
+    t.index ["matching_dog_id"], name: "index_matches_on_matching_dog_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -93,8 +93,8 @@ ActiveRecord::Schema.define(version: 2021_11_24_104519) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "dogs", "users"
-  add_foreign_key "matches", "dogs", column: "female_dog_id"
-  add_foreign_key "matches", "dogs", column: "male_dog_id"
+  add_foreign_key "matches", "dogs", column: "matched_dog_id"
+  add_foreign_key "matches", "dogs", column: "matching_dog_id"
   add_foreign_key "messages", "dogs"
   add_foreign_key "messages", "matches"
 end
