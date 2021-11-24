@@ -16,7 +16,6 @@ class MatchesController < ApplicationController
     else
       redirect_to dog_path(@match.matched_dog)
     end
-
   end
 
   def destroy

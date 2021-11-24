@@ -1,10 +1,10 @@
 <div class="dog-card-show">
   <div class="card-img-show", style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)), url('<%= cl_image_path(@dog.photo.key)%>')">
     <div class="match-buttons">
-      <%= link_to matches_path(authenticity_token: form_authenticity_token, match: { matching_dog_id: current_user.dogs.first, matched_dog_id: @dog.id, status: Match::STATUS[2]}), class: "r-match" do %>
+      <%= link_to matches_path(authenticity_token: form_authenticity_token, match: { matching_dog_id: current_user.dogs.first, matched_dog_id: @dog.id, status: Match::STATUS[2]}), class: "r-match", method: :post do %>
         <i class="fas fa-times-circle"></i>
       <% end %>
-      <%= link_to matches_path(authenticity_token: form_authenticity_token, match: { matching_dog_id: current_user.dogs.first, matched_dog_id: @dog.id, status: Match::STATUS[0]}), class: "a-match" do %>
+      <%= link_to matches_path(authenticity_token: form_authenticity_token, match: { matching_dog_id: current_user.dogs.first, matched_dog_id: @dog.id, status: Match::STATUS[0]}), class: "a-match", method: :post do %>
         <i class="fas fa-check-circle"></i>
       <% end %>
     </div>
