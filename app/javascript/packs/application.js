@@ -24,11 +24,13 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { openSearchInput } from "../components/search.js"
+import { openSearchInput } from "../components/search.js";
 import { initMapbox } from '../plugins/init_mapbox';
+import { initSlide } from "../components/initslide.js";
 
 document.addEventListener('turbolinks:load', () => {
   openSearchInput();
+  initSlide();
   initMapbox();
   // Call your functions here, e.g:
   // initSelect2();

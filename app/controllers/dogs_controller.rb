@@ -1,8 +1,8 @@
 class DogsController < ApplicationController
   def index
-    my_gender = current_user.dogs.first.gender
-    @dogs = Dog.filter_all(my_gender)
-
+    my_dog = current_user.dogs.first
+    @dogs = Dog.filter_all(my_dog)
+    
     @dogs = Dog.geocoded
   end
 
