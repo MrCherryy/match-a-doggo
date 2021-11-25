@@ -20,7 +20,7 @@ user4 = User.create(nickname: 'user4', email: 'user4@email.com', password: '1231
 user5 = User.create(nickname: 'user5', email: 'user5@email.com', password: '123123')
 
 dog = Dog.new(name: 'Lola', breed: 'husky', gender: 'female', pedigree: true, address: 'Via Col Di lana 6, Milan',
-               user: user1, matchable: true, birthdate: '2021/09/17')
+              user: user1, matchable: true, birthdate: '2021/09/17')
 file = URI.open('https://source.unsplash.com/626x750/?dog')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
