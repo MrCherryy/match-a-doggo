@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  
+
   resources :dogs
 
-  resources :matches, only: [:index, :create]
+  resources :matches, only: [:index, :create] do
+    member do
+      get '/accepted-match', to: 'matches#accept', as: :accept
+      get '/denied-match', to: 'matches#deny', as: :deny
+    end
+  end
 
   # resources :matches, only: :index
 
