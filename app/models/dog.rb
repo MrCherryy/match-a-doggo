@@ -15,7 +15,7 @@ class Dog < ApplicationRecord
   end
 
   def self.filter_all(gender)
-    Dog.where.not(gender: gender).where(matchable: true)
+    Dog.where.not(gender: gender).where(matchable: true).where.not(id: Match.pluck(:matched_dog_id))
   end
 
   def default_matchable
