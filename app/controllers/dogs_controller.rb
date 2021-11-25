@@ -47,7 +47,7 @@ class DogsController < ApplicationController
     @user = current_user
     @dog = Dog.find(params[:id])
     @dog.destroy
-    redirect_to dogs_path
+    redirect_to dogs_profile_path(@user)
   end
 
   private
