@@ -25,27 +25,27 @@ class MatchesController < ApplicationController
     redirect_to matches_profile_path(@user)
   end
 
-  # def accept
-  #   @match = Match.find(params[:id])
-  #   @match.status = "accepted"
-  #   if @match.save
-  #     redirect_to matches_profile_path
-  #   else
-  #     render "dashboard#matches"
-  #     flash[:alert] = "Your match was not saved!"
-  #   end
-  # end
+  def accept
+    @match = Match.find(params[:id])
+    @match.status = "accepted"
+    if @match.save
+      redirect_to matches_path
+    else
+      redirect_to matches_path
+      flash[:alert] = "Your match was not saved!"
+    end
+  end
 
-  # def deny
-  #   @match = Match.find(params[:id])
-  #   @match.status = "denied"
-  #   if @match.save
-  #     redirect_to matches_profile_path
-  #   else
-  #     render "dashboard#matches"
-  #     flash[:alert] = "Your match was not saved!"
-  #   end
-  # end
+  def deny
+    @match = Match.find(params[:id])
+    @match.status = "denied"
+    if @match.save
+      redirect_to matches_path
+    else
+      redirect_to matches_path
+      flash[:alert] = "Your match was not saved!"
+    end
+  end
 
   private
 
