@@ -1,6 +1,6 @@
 'use strict';
-
 import * as Hammer from "hammerjs";
+
 const initSlide = () => {
   var tinderContainer = document.querySelector('.tinder');
   var allCards = document.querySelectorAll('.tinder--card');
