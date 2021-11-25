@@ -2,11 +2,19 @@ class DogsController < ApplicationController
   def index
     my_dog = current_user.dogs.first
     @dogs = Dog.filter_all(my_dog)
+    
+    @dogs = Dog.geocoded
   end
 
   def show
     @dog = Dog.find(params[:id])
     @match = Match.new
+    @marker = {
+      lat: @dog.latitude,
+      lng: @dog.longitude,
+      info_window: render_to_string(partial: 'info_window', locals: { dog: @dog }),
+      #image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+    }
   end
 
   def new
@@ -39,7 +47,7 @@ class DogsController < ApplicationController
     @user = current_user
     @dog = Dog.find(params[:id])
     @dog.destroy
-    redirect_to dogs_path
+    redirect_to dogs_profile_path(@user)
   end
 
   private
