@@ -14,8 +14,8 @@ class Dog < ApplicationRecord
     { year: year, month: month }
   end
 
-  def self.filter_all(gender)
-    Dog.where.not(gender: gender)
+  def self.filter_all(dog)
+    Dog.where(matchable: true).where.not(gender: dog.gender).where.not(id: Match.where(matching_dog: dog).or(Match.where(matched_dog: dog)))
   end
 
   def default_matchable
