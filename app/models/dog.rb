@@ -4,6 +4,9 @@ class Dog < ApplicationRecord
   has_one_attached :photo
   before_save :default_matchable
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   GENDER = %w[female male]
   validates :gender, presence: true, inclusion: { in: GENDER }
   validates :name, :photo, :breed, :birthdate, :pedigree, :address, presence: true
