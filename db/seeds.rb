@@ -18,7 +18,6 @@ user2 = User.create(nickname: 'user2', email: 'user2@email.com', password: '1231
 user3 = User.create(nickname: 'user3', email: 'user3@email.com', password: '123123')
 user4 = User.create(nickname: 'user4', email: 'user4@email.com', password: '123123')
 user5 = User.create(nickname: 'user5', email: 'user5@email.com', password: '123123')
-User.all
 
 dog = Dog.new(name: 'Lola', breed: 'husky', gender: 'female', pedigree: true, address: 'Via Col Di lana 6, Milan',
               user: user1, matchable: true, birthdate: '2021/09/17')
@@ -49,5 +48,3 @@ dog = Dog.new(name: 'Oliver', breed: 'husky', gender: 'male', pedigree: true, ad
               user: user5, matchable: true, birthdate: '2021/06/17')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
-
-Match.create!(status: 'pending', matching_dog_id: '1', matched_dog_id: '2')

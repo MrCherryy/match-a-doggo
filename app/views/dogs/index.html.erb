@@ -1,11 +1,21 @@
-<h1>Dogs#index</h1>
-<p>Find me in app/views/dogs/index.html.erb</p>
-<% if @dogs.empty? %>
-  <p>There're no available matches</p>
-<% else %>
-  <ul>
-    <% @dogs.each do |d| %>
-      <li><%= link_to d.name, dog_path(d) %></li>
+<div class="tinder">
+  <div class="tinder--status">
+    <i class="fas fa-times"></i>
+    <i class="fa fa-heart"></i>
+  </div>
+
+  <div class="tinder--cards">
+    <% @dogs.each do |dog| %>
+      <div class="tinder--card">
+        <img src='<%= cl_image_path(dog.photo.key)%>'>
+        <h3><%= dog.name %></h3>
+        <p><%= dog.address %></p>
+      </div>
     <% end %>
-  </ul>
-<% end %>
+  </div>
+
+  <div class="tinder--buttons">
+    <button id="nope"><i class="fas fa-times"></i></button>
+    <button id="love"><i class="fa fa-heart"></i></button>
+  </div>
+</div>
