@@ -1,5 +1,5 @@
 module ApplicationHelper
   def current_dog
-    Dog.find(session[:dog_id])
+    session[:dog_id] ? Dog.find(session[:dog_id]) : Dog.new
   end
 end
