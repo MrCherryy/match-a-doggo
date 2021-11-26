@@ -1,7 +1,8 @@
 class DogsController < ApplicationController
   def index
     my_dog = current_user.dogs.first
-    @dogs = Dog.filter_all(my_dog)
+    distance = 15
+    @dogs = Dog.filter_all(my_dog, distance)
   end
 
   def show
