@@ -1,6 +1,7 @@
 class DogsController < ApplicationController
   def index
     my_dog = helpers.current_dog
+    redirect_to edit_user_registration_path, notice: "you have to select a dog" unless my_dog.id
     @dogs = Dog.filter_all(my_dog)
   end
 
