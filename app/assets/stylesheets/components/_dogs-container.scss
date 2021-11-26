@@ -109,12 +109,21 @@
   pointer-events: none;
 }
 
+.tinder--card a {
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  font-size: 18px;
+  color: white
+}
+
 .tinder--buttons {
   flex: 0 0 100px;
   text-align: center;
   padding-top: 20px;
   position: absolute;
   bottom: 65px;
+  padding-bottom: 30px;
 }
 
 .tinder--buttons button {
@@ -122,9 +131,13 @@
   line-height: 60px;
   width: 60px;
   border: 0;
-  background: #FFFFFF;
+  background: #4acc96;
   display: inline-block;
   margin: 0 8px;
+}
+
+.tinder--buttons button #nope {
+  background: #fd8779;
 }
 
 .tinder--buttons button:focus {
@@ -137,11 +150,11 @@
 }
 
 .fa-heart {
-  color: #FFACE4;
+  color: white;
 }
 
 .fa-times {
-  color: black;
+  color: white;
 }
 // .dog-card {
 //   width: 100%;

@@ -9,13 +9,15 @@
       <div class="tinder--card">
         <img src='<%= cl_image_path(dog.photo.key)%>'>
         <h3><%= dog.name %></h3>
-        <p><%= dog.address %></p>
+        <p><%= dog.address %></p><a href=""><i class="fas fa-info-circle"></i></a>
       </div>
       <div class="tinder--buttons">
-        <button id="nope"><i class="fas fa-times"></i></button>
-          <%= link_to matches_path(authenticity_token: form_authenticity_token, match: { matching_dog_id: current_user.dogs.first, matched_dog_id: dog.id, status: Match::STATUS[0]}), class: "a-match", id: "love", method: :post do %>
-            <i class="fa fa-heart"></i>
-          <% end %>
+        <%= link_to matches_path(authenticity_token: form_authenticity_token, match: { matching_dog_id: current_user.dogs.first, matched_dog_id: dog.id, status: Match::STATUS[2]}), class: "a-match", id: "nope", method: :post do %>
+          <button id="nope" style="background: #fd8779;"><i class="fas fa-times"></i></button>
+        <% end %>
+        <%= link_to matches_path(authenticity_token: form_authenticity_token, match: { matching_dog_id: current_user.dogs.first, matched_dog_id: dog.id, status: Match::STATUS[0]}), class: "a-match", id: "love", method: :post do %>
+          <button id="love"><i class="fa fa-heart"></i>
+        <% end %>
       </div>
     <% end %>
   </div>
