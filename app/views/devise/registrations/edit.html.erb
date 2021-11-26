@@ -41,7 +41,12 @@
     <div>
       <h4><%= @user.nickname %></h4>
       <h6><%= @user.email %></h6>
-    </div>
+      <% current_user.dogs.each do |dog| %>
+        <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
+          <%= cl_image_tag dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
+        <% end %>
+      <% end %>
+      <p>select dog <%= current_dog.name %></p>
   </div>
 </div>
 <br>
