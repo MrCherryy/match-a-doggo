@@ -35,5 +35,3 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
-
-// @import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
