@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  post '/new_dog_session', to: 'dogs#new_session'
+
   resources :dogs
 
   resources :matches, only: [:index, :create] do

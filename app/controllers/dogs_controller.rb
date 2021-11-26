@@ -1,6 +1,6 @@
 class DogsController < ApplicationController
   def index
-    my_dog = current_user.dogs.first
+    my_dog = helpers.current_dog
     @dogs = Dog.filter_all(my_dog)
   end
 
@@ -46,6 +46,11 @@ class DogsController < ApplicationController
     @dog = Dog.find(params[:id])
     @dog.destroy
     redirect_to dogs_profile_path(@user)
+  end
+
+  def new_session
+    session[:dog_id] = params[:dog_id]
+    redirect_to dogs_path
   end
 
   private
