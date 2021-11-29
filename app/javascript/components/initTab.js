@@ -1,17 +1,23 @@
-const myMatches = document.querySelector(".my-match-tab");
-const toReview = document.querySelector(".to-review-tab");
+const tabLinks = document.querySelectorAll('.tabs li')
+
+const tabFocus = () => {
+  console.log(tabLinks)
+  tabLinks.forEach((tabLink) => {
+    tabLink.addEventListener('click', (event) => {
+      event.currentTarget.classList.add('active-tab');
+      console.log(event)
+      if (event.path['2'].nextElementSibling) {
+        event.path['2'].nextElementSibling.classList.remove('active-tab');
+      } else {
+        event.path['2'].previousElementSibling.classList.remove('active-tab');
+      }
+    });
+  });
+}
+
 const initTab = () => {
-  if (myMatches) {
-    myMatches.addEventListener('click', () =>{
-      toReview.classList.remove('active-tab');
-      myMatches.classList.add('active-tab');
-    })
-  }
-  if (toReview) {
-    toReview.addEventListener('click', () =>{
-      myMatches.classList.remove('active-tab');
-      toReview.classList.add('active-tab');
-    })
+  if (tabLinks) {
+    tabFocus();
   }
 }
 
