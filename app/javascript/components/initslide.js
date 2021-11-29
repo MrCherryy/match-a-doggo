@@ -1,7 +1,10 @@
 'use strict';
 import * as Hammer from "hammerjs";
+import { csrfToken } from "@rails/ujs";
+const tinderContainer = document.querySelector('.tinder');
 
-const initSlide = () => {
+
+const slide = () => {
   var tinderContainer = document.querySelector('.tinder');
   var allCards = document.querySelectorAll('.tinder--card');
   var nope = document.getElementById('nope');
@@ -84,6 +87,19 @@ const initSlide = () => {
 
         if (love) {
           card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
+          fetch('/matches', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json", 'X-CSRF-Token': csrfToken() },
+            body: JSON.stringify({
+              match: {
+                matching_dog_id: card.dataset.matchingDog,
+                matched_dog_id: card.dataset.matchedDog,
+                status: "pending"
+              }
+            })
+          })
+          .then(response => response.text())
+          .then(data => console.log(data));
         } else {
           card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
         }
@@ -101,5 +117,9 @@ const initSlide = () => {
     love.addEventListener('click', loveListener);
   }
 }
-
+const initSlide = () => {
+  if (tinderContainer) {
+    slide();
+  }
+}
 export { initSlide };
