@@ -1,7 +1,7 @@
 class MatchesController < ApplicationController
 
   def index
-    @matches = current_user.dogs.first.matches
+    @matches = helpers.current_dog.matches
   end
 
   # def new

@@ -1,8 +1,8 @@
 
 <div class="container mt-5">
   <ul class="nav nav-tabs tabs">
-    <li class="active"><a data-toggle="tab" href="#pending"><h4 class="my-match-tab active-tab">My Matches</h4></a></li>
-    <li><a data-toggle="tab" href="#review"><h4 class="to-review-tab">To Review</h4></a></li>
+    <li class="active my-match-tab active-tab"><a data-toggle="tab" href="#pending"><h4>My Matches</h4></a></li>
+    <li class="to-review-tab"><a data-toggle="tab" href="#review"><h4>To Review</h4></a></li>
   </ul>
   <div class="tab-content">
     <div id="pending" class="tab-pane fade in active show">
@@ -14,8 +14,8 @@
                    <%= cl_image_tag current_dog.photo.key, class: "current_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
                    <%= cl_image_tag match.matched_dog.photo.key, class: "matched_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
                 </div>
-                <div class="status_container">
-                  <p>status: <%= match.status %></p>
+                <div class="status_container_matches">
+                  <p class="<%= match.status %>"><%= match.status %></p>
                   <div class="buttons_matches_container">
                     <%= link_to dog_path(match.matched_dog) do %>
                       <i class="fas fa-info-circle icon-match"></i>
@@ -32,11 +32,30 @@
         <div class="matches_to_review  mt-5">
           <% @matches.each do |match| %>
             <% if match.matching_dog_id != current_user.dogs.first.id %>
-              <p> I'm <%= link_to match.matching_dog.name, dog_path(match.matching_dog) %> and i want to match with you.  status: <%= match.status %></p>
-              <% if match.status == 'pending'  %>
-                <%= link_to 'Accept', accept_match_path(match)  %>
-                <%= link_to 'Deny', deny_match_path(match)  %>
-              <% end %>
+              <div class="card_pending">
+                <div class="avatar_matching">
+                   <%= cl_image_tag current_dog.photo.key, class: "current_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
+                   <%= cl_image_tag match.matching_dog.photo.key, class: "matching_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
+                </div>
+                <div class="status_container_review">
+                  <% if match.status == 'pending'  %>
+                    <div class="accept_reject_container">
+                      <%= link_to deny_match_path(match), class: "r-match" do %>
+                        <i class="fas fa-times-circle"></i>
+                      <% end %>
+                      <%= link_to accept_match_path(match), class: "a-match" do %>
+                        <i class="fa fa-check-circle"></i>
+                      <% end %>
+                    </div>
+                  <% end %>
+                  <div class="buttons_reviews_container">
+                    <%= link_to dog_path(match.matching_dog) do %>
+                      <i class="fas fa-info-circle icon-match"></i>
+                    <% end %>
+                    <i class="far fa-comment-dots icon-match"></i>
+                  </div>
+                </div>
+              </div>
             <% end %>
           <% end %>
         </div>
