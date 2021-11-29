@@ -29,7 +29,7 @@
     <h5>Select a dog</h5>
   </div>
 <div class="container d-flex flex-wrap justify-content-between
-" style="width:75vw">
+" style="width:290px">
   <% current_user.dogs.each do |dog| %>
     <div class="d-flex mb-4">
     <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
