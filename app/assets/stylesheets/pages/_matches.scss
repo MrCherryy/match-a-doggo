@@ -33,15 +33,32 @@
   left: 19%;
 }
 
-.status_container {
+.matching_avatar_dog {
+  position: absolute;
+  left: 19%;
+}
+
+.status_container_matches {
   margin-right: 40px;
   p {
-    border: 1px solid rgba(255, 219, 13, 0.76);
+    border: 1px solid ;
     border-radius: 100px;
-    background-color: rgba(255, 219, 13, 0.76);
     padding: 5px 10px;
   }
+  p.pending {
+    border-color: rgba(255, 219, 13, 0.76);
+    background-color: rgba(255, 219, 13, 0.76);
+  }
+  p.accepted {
+    border-color: rgba(13, 255, 74, 0.76);
+    background-color: rgba(13, 255, 74, 0.76);
+  }
+  p.denied {
+    border-color: rgba(255, 13, 13, 0.76);
+    background-color: rgba(255, 13, 13, 0.76);
+  }
 }
+
 
 .icon-match {
   text-decoration: none;
@@ -58,8 +75,82 @@
   }
 }
 .active-tab {
-  border: 1px solid black;
-  color: black ;
+  h4 {
+    border: 1px solid black;
+    color: black ;
+    border-radius: 100px;
+    padding: 5px 10px;
+  }
+}
+
+.accept_reject_container {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 40px;
+  width: 100%;
+  i {
+    font-size: 30px;
+  }
+}
+
+.buttons_reviews_container{
+  display: flex;
+  justify-content: space-between;
+  i {
+    font-size: 30px;
+  }
+  width: 100%;
+}
+
+.deny_button_review {
+  border: 1px solid rgba(235, 59, 59, 0.76);
   border-radius: 100px;
+  background-color: rgba(235, 59, 59, 0.76);
   padding: 5px 10px;
+  text-decoration: none !important;
+  color: white
+}
+
+.accept_button_review{
+  a{
+    text-decoration: none !important;
+    color: white;
+  }
+}
+
+.deny_button_review {
+   a{
+    text-decoration: none !important;
+    color: white;
+  }
+}
+
+.status_container_review {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.heart-view {
+  border-radius: 50%;
+  line-height: 50px;
+  width: 50px;
+  border: 0;
+  background: #fd8779;
+  margin: 0 8px;
+  text-align: center;
+  color: white;
+}
+
+.times-view {
+  border-radius: 50%;
+  line-height: 50px;
+  width: 50px;
+  border: 0;
+  background: #4acc96;
+  margin: 0 8px;
+  text-align: center;
+  color: white;
 }

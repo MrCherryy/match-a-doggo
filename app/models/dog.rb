@@ -1,5 +1,6 @@
 class Dog < ApplicationRecord
   belongs_to :user
+  has_many :matches, dependent: :destroy
   has_many :messages
   has_one_attached :photo
   before_save :default_matchable
