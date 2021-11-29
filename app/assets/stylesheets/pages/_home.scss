@@ -32,9 +32,11 @@
 }
 
 #btn_landing {
+  display: grid;
   margin: 0 auto;
   width: fit-content;
   .btn_start {
+    margin-bottom: 20px;
     color: white;
     padding: 12px 32px;
     background: rgba(243, 191, 93, 0.712);

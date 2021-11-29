@@ -4,5 +4,10 @@
   <p>We make <strong>your match</strong> and let the <strong>dogs do the rest</strong><strong></strong>!</p>
   </div>
   <div id="btn_landing">
-    <%= link_to 'Get Started', edit_user_registration_path, class: "btn_start" %>
+  <% if current_user %>
+    <%= link_to 'Get Started', dogs_profile_path(current_user), class: "btn_start" %>
+  <% else %>
+    <%= link_to 'Log in',  new_user_session_path, class: "btn_start"  %>
+    <%= link_to 'Sign up',  new_user_registration_path, class: "btn_start"  %>
+  <% end %>
   </div>

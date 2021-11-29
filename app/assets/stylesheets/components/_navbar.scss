@@ -22,7 +22,10 @@
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
-  top: -25px
+  top: -25px;
+  i:hover{
+    color: white !important;
+  }
 }
 
 .avatar-user {
@@ -30,4 +33,12 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+.avatar-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: unset;
 }
