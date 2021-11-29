@@ -21,26 +21,22 @@
     </div>"), dog_path(d) %>
   <%# end %>
 <%# </div> %>
-<div class="container text-center mt-5 mb-3"><h5>PROFILE</h5></div>
-  <br>
-  <div class="container text-center">
-    <%= cl_image_tag current_dog.photo.key, class: "avatar-large mb-3", alt: "avatar-large" %>
-    <h4><%= current_dog.name %></h4>
-    <h5>Select a dog</h5>
-  </div>
-<div class="container d-flex flex-wrap justify-content-between
-" style="width:290px">
-  <% current_user.dogs.each do |dog| %>
-    <div class="d-flex mb-4">
-    <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
-      <%= cl_image_tag dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
+<div class="d-flex flex-column" style="height:100vh; justify-content:space-evenly">
+  <div class="container text-center"><h4>SELECT A DOG</h4></div>
+  <div class="container d-flex flex-wrap justify-content-between
+  " style="width:290px; height:180px">
+    <% current_user.dogs.each do |dog| %>
+      <div class="d-flex mb-4">
+      <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
+        <%= cl_image_tag dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
+      <% end %>
+      <div style="display:flex; flex-direction:column; justify-content:space-between;">
+        <%= link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(dog), method: :delete, data: { confirm: "Remove #{dog.name}?" }, class: 'btn btn-danger btn-sm' %>
+        <%= link_to raw('<i class="fas fa-pen"></i>'), edit_dog_path(dog), class: 'btn btn-info btn-sm' %>
+      </div>
+      </div>
     <% end %>
-    <div style="display:flex; flex-direction:column; justify-content:space-between;">
-      <%= link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(dog), method: :delete, data: { confirm: "Remove #{dog.name}?" }, class: 'btn btn-danger btn-sm' %>
-      <%= link_to raw('<i class="fas fa-pen"></i>'), edit_dog_path(dog), class: 'btn btn-info btn-sm' %>
-    </div>
-    </div>
-  <% end %>
-  <%= link_to "+ Add a dog", new_dog_path, class: "btn btn-primary avatar-large mb-5" %>
-</div>
+    <%= link_to "+ Add a dog", new_dog_path, class: "btn btn-primary avatar-large mb-5" %>
+  </div>
   <h4 class="text-center">Dog selected: <%= current_dog.name %></h4>
+</div>
