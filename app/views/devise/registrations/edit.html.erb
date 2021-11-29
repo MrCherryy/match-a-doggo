@@ -37,9 +37,15 @@
   <div class="container text-center"><h5>PROFILE</h5></div>
   <br>
   <div class="container text-center">
-    <%= cl_image_tag current_dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
+    <% if current_dog.id != nil %>
+      <%= cl_image_tag current_dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
+    <% end %>
     <div>
+    <% if current_dog %>
       <h4><%= current_dog.name %></h4>
+    <% else %>
+      <h4><%= current_user.name %></h4>
+    <% end %>
       <h6>Select a dog</h6>
       <% current_user.dogs.each do |dog| %>
         <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
@@ -67,3 +73,4 @@
     </div>
   </div>
 </div>"), matches_path %>
+<%= link_to "log-out", destroy_user_session_path, method: :delete %>
