@@ -1,7 +1,7 @@
 'use strict';
 import * as Hammer from "hammerjs";
 import { csrfToken } from "@rails/ujs";
-const tinderContainer = document.querySelector('.tinder');
+var tinderContainer = document.querySelector('.tinder');
 
 
 const slide = () => {
@@ -118,6 +118,8 @@ const slide = () => {
   }
 }
 const initSlide = () => {
+  var tinderContainer = document.querySelector('.tinder');
+
   if (tinderContainer) {
     slide();
   }

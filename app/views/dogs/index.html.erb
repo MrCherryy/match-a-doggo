@@ -10,7 +10,7 @@
 
   <div class="tinder--cards">
     <% @dogs.each do |dog| %>
-      <div class="tinder--card" data-matched-dog="<%= dog.id%>" data-matching-dog="<%= current_user.dogs.first.id %>">
+      <div class="tinder--card" data-matched-dog="<%= dog.id%>" data-matching-dog="<%= current_dog.id %>">
         <img src='<%= cl_image_path(dog.photo.key)%>'>
         <h3><%= dog.name %></h3>
         <p><%= dog.address %></p><a href="<%= dog_path(dog)%>"><i class="fas fa-info-circle"></i></a>
