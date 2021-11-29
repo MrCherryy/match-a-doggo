@@ -1,7 +1,10 @@
-<%= simple_form_for @dog do |f| %>
-  <%= f.input :address %>
-  <%= f.input :matchable %>
-   <%= f.submit 'Update dog', class: 'btn btn-primary btn-sm'  %>
-<% end %>
-<br>
-<%= link_to raw('<i class="fas fa-chevron-left"></i>'), :back, class: 'btn btn-outline-primary' %> <%# profile_path(@user) %>
+<div class="container mt-3">
+  <h1 class="text-center">Edit your doggo</h1>
+  <%= simple_form_for @dog do |f| %>
+    <%= f.input :address %>
+    <%= f.input :matchable %>
+    <%= f.submit 'Update dog', class: 'btn btn-primary btn-sm'  %>
+  <% end %>
+  <br>
+  <%= link_to raw('<i class="fas fa-chevron-left"></i>'), :back, class: 'btn btn-outline-primary' %> <%# profile_path(@user) %>
+</div>
