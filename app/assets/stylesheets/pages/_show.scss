@@ -5,6 +5,13 @@
   background-repeat: no-repeat;
   border-radius: 0 0 40px 40px;
   box-shadow: #d6d6d6 0 0 8px;
+  h2 {
+    color: white;
+    position: absolute;
+    top: 51%;
+    left: 7%;
+    text-shadow: black 0 0 1px;
+  }
 }
 
 .card-description-show {
@@ -12,13 +19,16 @@
 }
 
 .dog-description {
-  margin: 10px 20px;
-  text-align: center;
+  margin-top: 20px;
+  text-align: left;
+  color: #303030;
 }
 
 .basic-dog-info {
-  h2 {
-    margin: 20px 0;
+  margin-top: 24px;
+  h5 {
+    font-size: 16px;
+    color: #606060;
   }
 }
 
@@ -34,16 +44,16 @@
 }
 
 .a-match {
-  color: green;
+  color: rgba(238, 83, 122, 0.747);
   :hover {
-    color: green !important;
+    color: rgba(238, 83, 122, 0.747) !important;
   }
 }
 
 .r-match {
-  color: red;
+  color: rgba(0, 132, 255, 0.671);
   :hover {
-    color: red !important;
+    color: rgba(0, 132, 255, 0.671) !important;
   }
 }
 
