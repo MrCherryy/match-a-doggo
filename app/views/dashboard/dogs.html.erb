@@ -1,16 +1,13 @@
-<h1>Dashboard#dogs</h1>
-<p>Find me in app/views/dashboard/dogs.html.erb</p>
-
-<div>
-  <%= link_to raw('<i class="fas fa-chevron-left"></i>'), :back, class: 'btn btn-outline-primary' %>
-<%= link_to "+ add a dog", new_dog_path, class: "btn btn-primary" %>
-  <div class="container"><h1>My dogs</h1></div>
-</div>
-<br>
-<div class="container">
-  <% @dogs.each do |d| %>
-    <%= link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(d), method: :delete, data: { confirm: "Remove #{d.name}?" }, class: 'btn btn-danger btn-sm' %>
-    <%= link_to raw("<div>
+<%# <div> %>
+  <%# link_to raw('<i class="fas fa-chevron-left"></i>'), :back, class: 'btn btn-outline-primary' %>
+<%# link_to "+ add a dog", new_dog_path, class: "btn btn-primary" %>
+  <%# <div class="container"><h1>My dogs</h1></div> %>
+<%# </div> %>
+<%# <br> %>
+<%# <div class="container"> %>
+  <%# @dogs.each do |d| %>
+    <%# link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(d), method: :delete, data: { confirm: "Remove #{d.name}?" }, class: 'btn btn-danger btn-sm' %>
+    <%# link_to raw("<div>
       #{cl_image_tag d.photo.key, height: 200}
       <div class='card-product-infos'>
         <p>Name: #{d.name}</p>
@@ -22,5 +19,28 @@
         <p>Matchable: #{d.matchable}</p>
       </div>
     </div>"), dog_path(d) %>
+  <%# end %>
+<%# </div> %>
+<div class="container text-center mt-5 mb-3"><h5>PROFILE</h5></div>
+  <br>
+  <div class="container text-center">
+    <%= cl_image_tag current_dog.photo.key, class: "avatar-large mb-3", alt: "avatar-large" %>
+    <h4><%= current_dog.name %></h4>
+    <h5>Select a dog</h5>
+  </div>
+<div class="container d-flex flex-wrap justify-content-between
+" style="width:75vw">
+  <% current_user.dogs.each do |dog| %>
+    <div class="d-flex mb-4">
+    <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
+      <%= cl_image_tag dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
+    <% end %>
+    <div style="display:flex; flex-direction:column; justify-content:space-between;">
+      <%= link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(dog), method: :delete, data: { confirm: "Remove #{dog.name}?" }, class: 'btn btn-danger btn-sm' %>
+      <%= link_to raw('<i class="fas fa-pen"></i>'), edit_dog_path(dog), class: 'btn btn-info btn-sm' %>
+    </div>
+    </div>
   <% end %>
+  <%= link_to "+ Add a dog", new_dog_path, class: "btn btn-primary avatar-large mb-5" %>
 </div>
+  <h4 class="text-center">Dog selected: <%= current_dog.name %></h4>
