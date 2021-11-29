@@ -1,6 +1,6 @@
 <div class="bottom-bar">
   <div class="nav-icon">
-    <%= link_to edit_user_registration_path, class: "dashboard-icon" do %>
+    <%= link_to dogs_profile_path(current_user), class: "dashboard-icon" do %>
     <% if current_dog.id != nil %>
       <%= cl_image_tag current_dog.photo.key, class: "avatar", alt: "avatar-large" %>
     <% end %>
