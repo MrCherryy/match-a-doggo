@@ -26,11 +26,13 @@ import "bootstrap";
 import { openSearchInput } from "../components/search.js";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initSlide } from "../components/initslide.js";
+import { initTab } from '../components/initTab';
 
 document.addEventListener('turbolinks:load', () => {
   openSearchInput();
   initMapbox();
   initSlide();
+  initTab();
   // Call your functions here, e.g:
   // initSelect2();
 });

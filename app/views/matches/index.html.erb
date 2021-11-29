@@ -1,15 +1,29 @@
 
 <div class="container mt-5">
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#pending">Pending Matches</a></li>
-    <li><a data-toggle="tab" href="#review">Matches to Review</a></li>
+  <ul class="nav nav-tabs tabs">
+    <li class="active"><a data-toggle="tab" href="#pending"><h4 class="my-match-tab active-tab">My Matches</h4></a></li>
+    <li><a data-toggle="tab" href="#review"><h4 class="to-review-tab">To Review</h4></a></li>
   </ul>
   <div class="tab-content">
     <div id="pending" class="tab-pane fade in active show">
       <div class="pending_matches">
         <% @matches.each do |match| %>
-          <% if match.matching_dog_id == current_user.dogs.first.id  %>
-            <p> I'm waiting for <%= match.matched_dog.name %> to confirm my match request.  status: <%= match.status %></p>
+          <% if match.matching_dog_id == current_dog.id %>
+              <div class="card_pending">
+                <div class="avatar_matching">
+                   <%= cl_image_tag current_dog.photo.key, class: "current_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
+                   <%= cl_image_tag match.matched_dog.photo.key, class: "matched_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
+                </div>
+                <div class="status_container">
+                  <p>status: <%= match.status %></p>
+                  <div class="buttons_matches_container">
+                    <%= link_to dog_path(match.matched_dog) do %>
+                      <i class="fas fa-info-circle icon-match"></i>
+                    <% end %>
+                    <i class="far fa-comment-dots icon-match"></i>
+                  </div>
+                </div>
+              </div>
           <% end %>
         <% end %>
       </div>
