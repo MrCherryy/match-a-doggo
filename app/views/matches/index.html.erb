@@ -35,7 +35,7 @@
               <div class="card_pending">
                 <div class="avatar_matching">
                    <%= cl_image_tag current_dog.photo.key, class: "current_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
-                   <%= cl_image_tag match.matching_dog.photo.key, class: "matching_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
+                   <%= cl_image_tag match.matched_dog.photo.key, class: "matched_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
                 </div>
                 <div class="status_container_review">
                   <% if match.status == 'pending'  %>
