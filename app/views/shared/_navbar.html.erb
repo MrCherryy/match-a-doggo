@@ -1,11 +1,13 @@
 <div class="bottom-bar">
   <div class="nav-icon">
-    <%= link_to dogs_profile_path(current_user), class: "dashboard-icon" do %>
-    <% if current_dog.id != nil %>
-      <%= cl_image_tag current_dog.photo.key, class: "avatar", alt: "avatar-large" %>
-      <% else %>
-      <%= image_tag(('MaDLogo.png'), :class => "avatar-logo") %>
-    <% end %>
+    <% if current_user %>
+      <%= link_to dogs_profile_path(current_user), class: "dashboard-icon" do %>
+        <% if current_dog.id != nil %>
+          <%= cl_image_tag current_dog.photo.key, class: "avatar", alt: "avatar-large" %>
+        <% else %>
+          <%= image_tag(('MaDLogo.png'), :class => "avatar-logo") %>
+        <% end %>
+      <% end %>
     <% end %>
     <div class="middle-icon">
       <%= link_to dogs_path, class: "matches-page-icon" do %>
