@@ -7,7 +7,7 @@ const initSelect2 = () => {
     width: '66%'
   });
   $('#dog_gender').select2({
-    width: '30%'
+    width: '32.5%'
   }
   );
 };
