@@ -31,9 +31,9 @@
   <div class="doggo-cards">
     <% current_user.dogs.each do |dog| %>
       <div class="">
-      <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
-        <%= cl_image_tag dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
-      <% end %>
+        <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
+          <%= cl_image_tag dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
+        <% end %>
       <div>
         <%= link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(dog), method: :delete, data: { confirm: "Remove #{dog.name}?" }, class: 'btn btn-danger btn-sm' %>
         <%= link_to raw('<i class="fas fa-pen"></i>'), edit_dog_path(dog), class: 'btn btn-info btn-sm' %>
