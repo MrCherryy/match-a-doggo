@@ -1,13 +1,14 @@
 <div class="container mt-3">
   <div class="container text-center"><h1>Add new doggo</h1></div>
+  <% breeds = Dog::BREED.unshift('') %>
   <%= simple_form_for @dog do |f| %>
     <%= f.input :name %>
-    <%= f.select :breed, Dog::BREED %>
+    <%= f.select :breed, breeds %>
     <%= f.select :gender, Dog::GENDER %>
     <%= f.input :birthdate, as: :string, required: false, input_html: {id: "datepicker"} %>
     <%= f.input :pedigree %>
     <%= f.input :address %>
-    <%= f.input :photo, as: :file %>
+    <%= f.input :photo, as: :file, label: 'Add a photo' %>
     <%= f.button :submit, class: 'btn btn-primary btn-sm'  %>
   <% end %>
   <br>

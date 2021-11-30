@@ -22,7 +22,7 @@ ActiveStorage.start()
 import "bootstrap";
 
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { initSelect2 } from '../components/init_select2';
 import { initFlatpickr } from "../plugins/flatpickr";
 import { openSearchInput } from "../components/search.js";
 import { initMapbox } from '../plugins/init_mapbox';
@@ -36,5 +36,5 @@ document.addEventListener('turbolinks:load', () => {
   initSlide();
   initFlatpickr();
   // Call your functions here, e.g:
-  // initSelect2();
+  initSelect2();
 });
