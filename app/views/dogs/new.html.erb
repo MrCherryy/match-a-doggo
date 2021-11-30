@@ -1,15 +1,16 @@
-<div class="container mt-3">
-  <div class="container text-center"><h1>Add new doggo</h1></div>
-  <%= simple_form_for @dog do |f| %>
-    <%= f.input :name %>
-    <%= f.input :breed %>
-    <%= f.select :gender, Dog::GENDER %>
+<div class="wrapper">
+  <h1 class="text-center">Add new doggo</h1>
+  <% breeds = Dog::BREED.unshift('') %>
+  <%= simple_form_for @dog, html: { class: "form-flex" } do |f| %>
+    <%= f.input :name, label: false, placeholder: 'Name' %>
+    <div>
+      <%= f.select :breed, breeds %>
+      <%= f.select :gender, Dog::GENDER %>
+    </div>
     <%= f.input :birthdate, as: :string, required: false, input_html: {id: "datepicker"} %>
     <%= f.input :pedigree %>
-    <%= f.input :address %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class: 'btn btn-primary btn-sm'  %>
+    <%= f.input :address, label: false, placeholder: 'Address' %>
+    <%= f.input :photo, as: :file, label: 'Add a photo' %>
+    <%= f.submit 'Add a new doggo', class: 'btn btn-info add-a-dog'  %>
   <% end %>
-  <br>
-  <%= link_to raw('<i class="fas fa-chevron-left"></i>'), dogs_profile_path(@user), class: 'btn btn-outline-primary' %>
 </div>
