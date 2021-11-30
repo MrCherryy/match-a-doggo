@@ -9,6 +9,7 @@
   box-shadow: #d1d1d1 1px 1px 4px;
   border-radius: 10px;
   margin: 15px 0;
+  background-color: white;
 }
 
 .buttons_matches_container {
@@ -44,31 +45,32 @@
     border: 1px solid ;
     border-radius: 100px;
     padding: 5px 10px;
+    color: $gray;
   }
   p.pending {
-    border-color: rgba(255, 219, 13, 0.76);
-    background-color: rgba(255, 219, 13, 0.76);
+    border-color: $yellow;
+    background-color: $yellow;
   }
   p.accepted {
-    border-color: rgba(13, 255, 74, 0.76);
-    background-color: rgba(13, 255, 74, 0.76);
+    border-color: $green;
+    background-color: $green;
   }
   p.denied {
-    border-color: rgba(255, 13, 13, 0.76);
-    background-color: rgba(255, 13, 13, 0.76);
+    border-color: $red;
+    background-color: $red;
   }
 }
 
 
 .icon-match {
   text-decoration: none;
-  color: black;
+  color: $black;
 }
 
 .tabs{
   h4 {
     text-decoration: none !important;
-    color: black;
+    color: $black;
   }
   a {
     text-decoration: none !important;
@@ -104,9 +106,9 @@
 }
 
 .deny_button_review {
-  border: 1px solid rgba(235, 59, 59, 0.76);
+  border: 1px solid $red;
   border-radius: 100px;
-  background-color: rgba(235, 59, 59, 0.76);
+  background-color: $red;
   padding: 5px 10px;
   text-decoration: none !important;
   color: white
@@ -139,7 +141,7 @@
   line-height: 50px;
   width: 50px;
   border: 0;
-  background: #fd8779;
+  background: $red;
   margin: 0 8px;
   text-align: center;
   color: white;
@@ -150,7 +152,7 @@
   line-height: 50px;
   width: 50px;
   border: 0;
-  background: #4acc96;
+  background: $green;
   margin: 0 8px;
   text-align: center;
   color: white;
