@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  justify-content: space-evenly;
+}
+
+.add-a-dog {
+    margin-bottom: 20px;
+    color: white;
+    padding: 12px 32px;
+    background: rgba(243, 191, 93, 0.712);
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    font-family: Varela Round;
+}
