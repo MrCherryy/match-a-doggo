@@ -31,11 +31,11 @@
       <div id="review" class="tab-pane fade">
         <div class="matches_to_review  mt-5">
           <% @matches.each do |match| %>
-            <% if match.matching_dog_id != current_user.dogs.first.id %>
+            <% if current_dog.id == match.matched_dog_id && match.status != "denied"%>
               <div class="card_pending">
                 <div class="avatar_matching">
                    <%= cl_image_tag current_dog.photo.key, class: "current_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
-                   <%= cl_image_tag match.matched_dog.photo.key, class: "matched_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
+                   <%= cl_image_tag match.matching_dog.photo.key, class: "matched_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
                 </div>
                 <div class="status_container_review">
                   <% if match.status == 'pending'  %>
