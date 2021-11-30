@@ -27,6 +27,7 @@ import { initFlatpickr } from "../plugins/flatpickr";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initSlide } from "../components/initslide.js";
 import { initTab } from '../components/initTab';
+import { initAutocomplete } from '../plugins/init_autocomplete';
 
 document.addEventListener('turbolinks:load', () => {
   initTab();
@@ -35,4 +36,5 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
   // Call your functions here, e.g:
   initSelect2();
+  initAutocomplete();
 });
