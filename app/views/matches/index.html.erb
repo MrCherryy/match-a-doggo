@@ -20,7 +20,9 @@
                     <%= link_to dog_path(match.matched_dog) do %>
                       <i class="fas fa-info-circle icon-match"></i>
                     <% end %>
-                    <i class="far fa-comment-dots icon-match"></i>
+                    <%= link_to stylesheets_dogs_show_path do %>
+                      <i class="far fa-comment-dots icon-match"></i>
+                      <% end %>
                   </div>
                 </div>
               </div>
@@ -52,7 +54,7 @@
                     <%= link_to dog_path(match.matching_dog) do %>
                       <i class="fas fa-info-circle icon-match"></i>
                     <% end %>
-                    <i class="far fa-comment-dots icon-match"></i>
+                                          <i class="far fa-comment-dots icon-match"></i>
                   </div>
                 </div>
               </div>
