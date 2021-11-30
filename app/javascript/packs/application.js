@@ -24,14 +24,12 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initFlatpickr } from "../plugins/flatpickr";
-import { openSearchInput } from "../components/search.js";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initSlide } from "../components/initslide.js";
 import { initTab } from '../components/initTab';
 
 document.addEventListener('turbolinks:load', () => {
   initTab();
-  // openSearchInput();
   initMapbox();
   initSlide();
   initFlatpickr();
