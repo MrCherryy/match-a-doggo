@@ -32,6 +32,20 @@
   }
 }
 
+.back-button {
+  font-size: 40px;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  i {
+      color: white
+  }
+  a:hover {
+    text-decoration: none !important;
+    color: white;
+  }
+}
+
 .match-buttons {
   font-size: 40px;
   position: absolute;
@@ -40,7 +54,6 @@
   a:hover {
     text-decoration: none !important;
   }
-
 }
 
 .a-match {
@@ -51,9 +64,9 @@
 }
 
 .r-match {
-  color: rgba(0, 132, 255, 0.671);
+  color: #55D1C2;
   :hover {
-    color: rgba(0, 132, 255, 0.671) !important;
+    color: #55D1C2 !important;
   }
 }
 
