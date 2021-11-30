@@ -7,4 +7,5 @@
   <% end %>
   <br>
   <%= link_to raw('<i class="fas fa-chevron-left"></i>'), :back, class: 'btn btn-outline-primary' %> <%# profile_path(@user) %>
+  <%= link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(@dog), method: :delete, data: { confirm: "Remove #{@dog.name}?" }, class: 'btn btn-danger btn-sm' %>
 </div>

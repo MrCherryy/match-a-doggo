@@ -23,23 +23,28 @@
 <%# </div> %>
 <div class="" >
   <div class="logo">
-    <h4>SELECT A DOG</h4>
     <img src="<%= asset_path('logo.png')%>" alt="Avatar">
-        <h3 class="">Your Doggo is: <%= current_dog.name %></h3>
+    <h3>Select A Dog</h3>
+    <% if current_dog.id %>
+      <h4 class="">You are matching </h4>
+      <h2><%= current_dog.name %></h2>
+    <% end %>
   </div>
 
   <div class="doggo-cards">
     <% current_user.dogs.each do |dog| %>
-      <div class="">
-      <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
-        <%= cl_image_tag dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
-      <% end %>
-      <div>
-        <%= link_to raw('<i class="far fa-trash-alt"></i>'), dog_path(dog), method: :delete, data: { confirm: "Remove #{dog.name}?" }, class: 'btn btn-danger btn-sm' %>
-        <%= link_to raw('<i class="fas fa-pen"></i>'), edit_dog_path(dog), class: 'btn btn-info btn-sm' %>
-      </div>
+      <div class="current-dog-container <%= current_dog.id == dog.id %>">
+        <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
+          <%= cl_image_tag dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
+        <% end %>
+        <h2><%= dog.name %></h2>
+        <div>
+          <%= link_to raw('<i class="fas fa-pen"></i>'), edit_dog_path(dog), class: 'edit-pen' %>
+        </div>
       </div>
     <% end %>
-    <%= link_to "+ Add a dog", new_dog_path, class: "btn btn-primary avatar-large mb-5" %>
+    <div class="current-dog-container add-dog-btn">
+      <%= link_to "+", new_dog_path %>
+    </div>
   </div>
 </div>

@@ -1,18 +1,18 @@
 
 .logo {
   text-align: center;
-  padding: 45px 70px;
+  padding: 22px 70px;
   img {
-    width: 25%;
+    width: 130px;;
     border-radius: 50%;
-  }
-  h4 {
-    color: #303030;
   }
   h3 {
     color: #303030;
+    padding: 13px;
+  }
+  h4 {
+    color: #303030;
     font-size: 18px;
-    padding: 12px;
   }
 }
 .doggo-cards {
@@ -20,5 +20,54 @@
   margin: 20px;
   display: grid;
   grid-template-columns: 6fr 6fr;
+  grid-gap: 30px;
   justify-items: center
+}
+
+.btn-primary {
+  padding: 50px;
+  font-size: 30px;
+  color: white;
+}
+
+.add-dog-btn {
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 8px;
+  background-color: $gray;
+  font-size: 150px;
+  text-align: center;
+  a {
+    position: absolute;
+    top: -21%;
+    left: 23%;
+    color: white;
+  }
+}
+
+.current-dog-container {
+  position: relative;
+  max-width: 150px;
+  max-height: 150px;
+  h2 {
+    position: absolute;
+    top: 77%;
+    color: white;
+    font-size: 24px;
+    left: 5%;
+  }
+}
+.edit-pen {
+  position: absolute;
+  top: 9%;
+  right: 12px;
+  color: white;
+  text-shadow: black 0 0 2px;
+  font-size: 20px;
+}
+
+.true {
+  img {
+    border: $yellow solid 8px;
+  }
 }
