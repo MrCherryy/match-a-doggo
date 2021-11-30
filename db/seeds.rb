@@ -21,276 +21,276 @@ user5 = User.create(nickname: 'user5', email: 'user5@email.com', password: '1231
 user6 = User.create(nickname: 'user6', email: 'user6@email.com', password: '123123')
 
 
-# user1 (Cocker Spaniel Husky female)
-dog = Dog.new(name: 'Lily', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Via Col Di lana 6, Milan',
+# user1 (spaniel-cocker husky female)
+dog = Dog.new(name: 'Lily', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Via Col Di lana 6, Milan',
               user: user1, matchable: true, birthdate: '2021/09/17')
 file = URI.open('https://images.unsplash.com/photo-1559190394-df5a28aab5c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Fiona', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via FILIPPO ABBIATI 6, Milan',
+dog = Dog.new(name: 'Fiona', breed: 'husky', gender: 'female', pedigree: true, address: 'Via FILIPPO ABBIATI 6, Milan',
               user: user1, matchable: true, birthdate: '2020/08/23')
 file = URI.open('https://images.unsplash.com/photo-1590419690008-905895e8fe0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-# user2 (Cocker Spaniel Husky male)
-dog = Dog.new(name: 'Toby', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via UGO FOSCOLO 5, Milan',
+# user2 (spaniel-cocker husky male)
+dog = Dog.new(name: 'Toby', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via UGO FOSCOLO 5, Milan',
               user: user2, matchable: true, birthdate: '2020/05/10')
 file = URI.open('https://images.unsplash.com/photo-1597666994536-e299696c6a61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Dax', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via CARADOSSO 6, Milan',
+dog = Dog.new(name: 'Dax', breed: 'husky', gender: 'male', pedigree: true, address: 'Via CARADOSSO 6, Milan',
               user: user2, matchable: true, birthdate: '2021/05/06')
 file = URI.open('https://images.unsplash.com/photo-1568572933382-74d440642117?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
 # user3
-# 10 cocker spaniel FEMALE
-dog = Dog.new(name: 'Rosie', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Viale Brenta 10, Milan',
+# 10 spaniel-cocker FEMALE
+dog = Dog.new(name: 'Rosie', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Viale Brenta 10, Milan',
               user: user3, matchable: true, birthdate: '2020/08/16')
 file = URI.open('https://images.unsplash.com/photo-1621543516543-1a60beceae95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Astrid', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Corso Lodi 15, Milan',
+dog = Dog.new(name: 'Astrid', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Corso Lodi 15, Milan',
               user: user4, matchable: true, birthdate: '2020/07/15')
 file = URI.open('https://images.unsplash.com/photo-1615042986817-bcfb63167cb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Iris', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Via Eugenio Vania 2, Milan',
+dog = Dog.new(name: 'Iris', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Via Eugenio Vania 2, Milan',
               user: user5, matchable: true, birthdate: '2021/05/14')
 file = URI.open('https://images.unsplash.com/photo-1615042986485-db725383ff70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Trix', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Piazzale Cantore 4, Milan',
+dog = Dog.new(name: 'Trix', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Piazzale Cantore 4, Milan',
               user: user6, matchable: true, birthdate: '2020/06/13')
 file = URI.open('https://images.unsplash.com/photo-1532592333381-a141e3f197c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Bella', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Via CASCINA CORBA, Milan',
+dog = Dog.new(name: 'Bella', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Via CASCINA CORBA, Milan',
               user: user3, matchable: true, birthdate: '2020/05/13')
 file = URI.open('https://images.unsplash.com/photo-1615042987670-679845d7f890?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Alice', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Via Delle GARDENIE, Milan',
+dog = Dog.new(name: 'Alice', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Via Delle GARDENIE, Milan',
               user: user4, matchable: true, birthdate: '2020/04/10')
 file = URI.open('https://images.unsplash.com/photo-1572531222298-40f0c0a1e584?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1261&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Tanya', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Via TONEZZA, Milan',
+dog = Dog.new(name: 'Tanya', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Via TONEZZA, Milan',
               user: user5, matchable: true, birthdate: '2020/03/02')
 file = URI.open('https://images.unsplash.com/photo-1615042986485-db725383ff70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
 
-dog = Dog.new(name: 'Kiki', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Via AGRIGENTO, Milan',
+dog = Dog.new(name: 'Kiki', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Via AGRIGENTO, Milan',
               user: user6, matchable: true, birthdate: '2020/07/05')
 file = URI.open('https://images.unsplash.com/photo-1504826260979-242151ee45b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Lora', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Via CELIO 4, Milan',
+dog = Dog.new(name: 'Lora', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Via CELIO 4, Milan',
               user: user3, matchable: true, birthdate: '2020/12/13')
 file = URI.open('https://images.unsplash.com/photo-1579213838826-51de388c360c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
 
-dog = Dog.new(name: 'Erin', breed: 'Cocker Spaniel', gender: 'female', pedigree: true, address: 'Via Dei FRANGIPANI, Milan',
+dog = Dog.new(name: 'Erin', breed: 'spaniel-cocker', gender: 'female', pedigree: true, address: 'Via Dei FRANGIPANI, Milan',
               user: user4, matchable: true, birthdate: '2020/11/13')
 file = URI.open('https://images.unsplash.com/photo-1600513396935-bb8623508e44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
 
-# #10 cocker spaniel MALE
-dog = Dog.new(name: 'Balto', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via Del GALLO 23, Milan',
+# #10 spaniel-cocker MALE
+dog = Dog.new(name: 'Balto', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via Del GALLO 23, Milan',
               user: user5, matchable: true, birthdate: '2021/03/12')
 file = URI.open('https://images.unsplash.com/photo-1585698708041-af48d48f8c0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1744&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Flash', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via LANDOLFO 7, Milan',
+dog = Dog.new(name: 'Flash', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via LANDOLFO 7, Milan',
               user: user6, matchable: true, birthdate: '2020/02/11')
 file = URI.open('https://images.unsplash.com/photo-1615315453342-53d9b799d54e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1063&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Fred', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via COL MOSCHIN 6, Milan',
+dog = Dog.new(name: 'Fred', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via COL MOSCHIN 6, Milan',
               user: user3, matchable: true, birthdate: '2021/07/09')
 file = URI.open('https://images.unsplash.com/photo-1548031611-745a4c0e6c93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Robby', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via BERNARDO ZAMAGNA 2, Milan',
+dog = Dog.new(name: 'Robby', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via BERNARDO ZAMAGNA 2, Milan',
               user: user4, matchable: true, birthdate: '2020/04/08')
 file = URI.open('https://images.unsplash.com/photo-1610231340708-d1c0902a4bd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Ronnie', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via LOVERE, Milan',
+dog = Dog.new(name: 'Ronnie', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via LOVERE, Milan',
               user: user5, matchable: true, birthdate: '2020/04/04')
 file = URI.open('https://images.unsplash.com/photo-1562940111-b7c83c810a03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Eres', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via PERGINE 2, Milan',
+dog = Dog.new(name: 'Eres', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via PERGINE 2, Milan',
               user: user6, matchable: true, birthdate: '2021/09/09')
 file = URI.open('https://images.unsplash.com/photo-1587463272361-565200f82b33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Wisky', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via ALDO CARPI, Milan',
+dog = Dog.new(name: 'Wisky', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via ALDO CARPI, Milan',
               user: user3, matchable: true, birthdate: '2021/07/12')
 file = URI.open('https://images.unsplash.com/photo-1548937652-a0f1a3e1ce40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Willow', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via BISANZIO 2, Milan',
+dog = Dog.new(name: 'Willow', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via BISANZIO 2, Milan',
               user: user4, matchable: true, birthdate: '2020/02/25')
 file = URI.open('https://images.unsplash.com/photo-1592146463560-a974927bcf9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=681&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Rio', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via GALLARATE 2, Milan',
+dog = Dog.new(name: 'Rio', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via GALLARATE 2, Milan',
               user: user5, matchable: true, birthdate: '2021/11/29')
 file = URI.open('https://images.unsplash.com/photo-1550085146-e2181eb8fb82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Loris', breed: 'Cocker Spaniel', gender: 'male', pedigree: true, address: 'Via MARIO BORSA 2, Milan',
+dog = Dog.new(name: 'Loris', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via MARIO BORSA 2, Milan',
               user: user6, matchable: true, birthdate: '2020/12/25')
 file = URI.open('https://images.unsplash.com/photo-1606069113895-d305e6ea3a78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-# #10 Husky FEMALE
-dog = Dog.new(name: 'Peggie', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via CARLO MARATTA 6, Milan',
+# #10 husky FEMALE
+dog = Dog.new(name: 'Peggie', breed: 'husky', gender: 'female', pedigree: true, address: 'Via CARLO MARATTA 6, Milan',
               user: user3, matchable: true, birthdate: '2021/09/01')
 file = URI.open('https://images.unsplash.com/photo-1547407139-3c921a66005c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Trilly', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via CAPPUCCINI 6, Milan',
+dog = Dog.new(name: 'Trilly', breed: 'husky', gender: 'female', pedigree: true, address: 'Via CAPPUCCINI 6, Milan',
               user: user4, matchable: true, birthdate: '2021/02/17')
 file = URI.open('https://images.unsplash.com/photo-1561297108-a47d55d96a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Dafne', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via LIVORNO 6, Milan',
+dog = Dog.new(name: 'Dafne', breed: 'husky', gender: 'female', pedigree: true, address: 'Via LIVORNO 6, Milan',
               user: user5, matchable: true, birthdate: '2020/04/29')
 file = URI.open('https://images.unsplash.com/photo-1578860549169-219f5e786c1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Sophie', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via CARADOSSO 6, Milan',
+dog = Dog.new(name: 'Sophie', breed: 'husky', gender: 'female', pedigree: true, address: 'Via CARADOSSO 6, Milan',
               user: user6, matchable: true, birthdate: '2021/06/06')
 file = URI.open('https://images.unsplash.com/photo-1616568799337-3d7e0ab9caf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Sole', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via ALDO MORO 6, Milan',
+dog = Dog.new(name: 'Sole', breed: 'husky', gender: 'female', pedigree: true, address: 'Via ALDO MORO 6, Milan',
               user: user3, matchable: true, birthdate: '2021/03/05')
 file = URI.open('https://images.unsplash.com/photo-1540411003967-af56b79be677?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Ginny', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via CESARE VIGNATI, Milan',
+dog = Dog.new(name: 'Ginny', breed: 'husky', gender: 'female', pedigree: true, address: 'Via CESARE VIGNATI, Milan',
               user: user4, matchable: true, birthdate: '2020/09/30')
 file = URI.open('https://images.unsplash.com/photo-1616568799337-3d7e0ab9caf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Venus', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via FLAVIA, Milan',
+dog = Dog.new(name: 'Venus', breed: 'husky', gender: 'female', pedigree: true, address: 'Via FLAVIA, Milan',
               user: user5, matchable: true, birthdate: '2020/11/21')
 file = URI.open('https://images.unsplash.com/photo-1605568427561-40dd23c2acea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Polly', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via PESARO, Milan',
+dog = Dog.new(name: 'Polly', breed: 'husky', gender: 'female', pedigree: true, address: 'Via PESARO, Milan',
               user: user6, matchable: true, birthdate: '2021/12/11')
 file = URI.open('https://images.unsplash.com/photo-1577920613552-1de9821340cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Andromeda', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via ANCONA, Milan',
+dog = Dog.new(name: 'Andromeda', breed: 'husky', gender: 'female', pedigree: true, address: 'Via ANCONA, Milan',
               user: user3, matchable: true, birthdate: '2020/08/06')
 file = URI.open('https://images.unsplash.com/photo-1577915689826-f6add3fa3f98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Elly', breed: 'Husky', gender: 'female', pedigree: true, address: 'Via CASE ROTTE 5, Milan',
+dog = Dog.new(name: 'Elly', breed: 'husky', gender: 'female', pedigree: true, address: 'Via CASE ROTTE 5, Milan',
               user: user4, matchable: true, birthdate: '2020/06/08')
 file = URI.open('https://images.unsplash.com/photo-1577207989354-f076506b43e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1082&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-# #10 Husky MALE
-dog = Dog.new(name: 'Boris', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via CARADOSSO 6, Milan',
+# #10 husky MALE
+dog = Dog.new(name: 'Boris', breed: 'husky', gender: 'male', pedigree: true, address: 'Via CARADOSSO 6, Milan',
               user: user5, matchable: true, birthdate: '2020/08/07')
 file = URI.open('https://images.unsplash.com/photo-1616567214738-22fc0c6332b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Rufy', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via CARADOSSO 6, Milan',
+dog = Dog.new(name: 'Rufy', breed: 'husky', gender: 'male', pedigree: true, address: 'Via CARADOSSO 6, Milan',
               user: user6, matchable: true, birthdate: '2021/05/05')
 file = URI.open('https://images.unsplash.com/photo-1613228554660-ce294bfb432a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Zoro', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via CARADOSSO 6, Milan',
+dog = Dog.new(name: 'Zoro', breed: 'husky', gender: 'male', pedigree: true, address: 'Via CARADOSSO 6, Milan',
               user: user3, matchable: true, birthdate: '2020/03/06')
 file = URI.open('https://images.unsplash.com/photo-1582020792000-f6d3c0619809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=748&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Sanji', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via CARADOSSO 6, Milan',
+dog = Dog.new(name: 'Sanji', breed: 'husky', gender: 'male', pedigree: true, address: 'Via CARADOSSO 6, Milan',
               user: user4, matchable: true, birthdate: '2020/06/01')
 file = URI.open('https://images.unsplash.com/photo-1590925888274-723778397410?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Neji', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via MILAZZO, Milan',
+dog = Dog.new(name: 'Neji', breed: 'husky', gender: 'male', pedigree: true, address: 'Via MILAZZO, Milan',
               user: user5, matchable: true, birthdate: '2021/10/01')
 file = URI.open('https://images.unsplash.com/photo-1578158334851-363fe6d16531?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Lampo', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via SAN FERMO, Milan',
+dog = Dog.new(name: 'Lampo', breed: 'husky', gender: 'male', pedigree: true, address: 'Via SAN FERMO, Milan',
               user: user6, matchable: true, birthdate: '2021/12/01')
 file = URI.open('https://images.unsplash.com/photo-1616568799337-3d7e0ab9caf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
 
-dog = Dog.new(name: 'Ettore', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via TOMMASO GROSSI, Milan',
+dog = Dog.new(name: 'Ettore', breed: 'husky', gender: 'male', pedigree: true, address: 'Via TOMMASO GROSSI, Milan',
               user: user3, matchable: true, birthdate: '2020/11/01')
 file = URI.open('https://images.unsplash.com/photo-1597262945345-953492d522dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Benji', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via CERVA, Milan',
+dog = Dog.new(name: 'Benji', breed: 'husky', gender: 'male', pedigree: true, address: 'Via CERVA, Milan',
               user: user4, matchable: true, birthdate: '2020/07/01')
 file = URI.open('https://images.unsplash.com/photo-1546708455-bcf526639c27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=642&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Olly', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via GUBBIO 6, Milan',
+dog = Dog.new(name: 'Olly', breed: 'husky', gender: 'male', pedigree: true, address: 'Via GUBBIO 6, Milan',
               user: user5, matchable: true, birthdate: '2021/04/02')
 file = URI.open('https://images.unsplash.com/photo-1536572743959-90cb37883a36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
-dog = Dog.new(name: 'Pedro', breed: 'Husky', gender: 'male', pedigree: true, address: 'Via PASSIONE, Milan',
+dog = Dog.new(name: 'Pedro', breed: 'husky', gender: 'male', pedigree: true, address: 'Via PASSIONE, Milan',
               user: user6, matchable: true, birthdate: '2021/01/01')
 file = URI.open('https://images.unsplash.com/photo-1568572933382-74d440642117?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
