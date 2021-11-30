@@ -10,35 +10,45 @@
   justify-content: space-around;
   display: flex;
   font-size: 34px;
-}
-
-.middle-icon {
-  width: 60px;
-  height: 60px;
-  background: #F8CB75;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 50%;
-  position: absolute;
-  top: -25px;
-  i:hover{
-    color: white !important;
+  a {
+  color: #9aa4b1
   }
 }
 
-.avatar-user {
-  vertical-align: middle;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.active-icon {
+  border-top: rgba(243, 191, 93, 0.712) solid 2px;
+  i {
+    color: rgba(243, 191, 93, 0.712);
+  }
 }
 
-.avatar-logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  vertical-align: unset;
-}
+// .middle-icon {
+//   width: 60px;
+//   height: 60px;
+//   background: #F8CB75;
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   cursor: pointer;
+//   border-radius: 50%;
+//   position: absolute;
+//   top: -25px;
+//   i:hover{
+//     color: white !important;
+//   }
+// }
+
+// .avatar-user {
+//   vertical-align: middle;
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50%;
+// }
+
+// .avatar-logo {
+//   width: 60px;
+//   height: 60px;
+//   border-radius: 50%;
+//   object-fit: cover;
+//   vertical-align: unset;
+// }
