@@ -1,7 +1,7 @@
 <div class="chat">
       <div class="chat-header clearfix">
           <% if current_user %>
-      <%= link_to dogs_profile_path(current_user), class: "dashboard-icon" do %>
+      <%= link_to "#", class: "dashboard-icon" do %>
         <% if current_dog.id != nil %>
           <%= cl_image_tag current_dog.photo.key, class: "avatar", alt: "avatar-large" %>
         <% else %>
@@ -11,7 +11,7 @@
     <% end %>
 
         <div class="chat-about">
-          <div class="chat-with">Chat with Lola's owner, Matteo</div>
+          <div class="chat-with">Chat with Lola's owner, Chiara</div>
           <div class="chat-num-messages">You matched on November the 30th!</div>
         </div>
       </div> <!-- end chat-header -->
@@ -21,11 +21,11 @@
           <li class="clearfix">
             <div class="message-data align-right">
               <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
-              <span class="message-data-name" >Chiara</span> <i class="fa fa-circle me"></i>
+              <span class="message-data-name" >Me</span> <i class="fa fa-circle me"></i>
 
             </div>
             <div class="message other-message float-right">
-              Hey Matteo, we matched our dogs!<br>
+              Hey Chiara, we matched our dogs!<br>
             </div>
           </li>
 
@@ -35,35 +35,9 @@
               <span class="message-data-time">10:12 AM, Today</span>
             </div>
             <div class="message my-message">
-              Hey Chiara! I couldn't help but immediatly match your Lucky, he has beautiful eyes!
+              Hey Matteo! I couldn't help but immediatly match your Lucky, he has beautiful eyes!
             </div>
           </li>
-
-          <li class="clearfix">
-            <div class="message-data align-right">
-              <span class="message-data-time" >10:14 AM, Today</span> &nbsp; &nbsp;
-              <span class="message-data-name" >Chiara</span> <i class="fa fa-circle me"></i>
-
-            </div>
-            <div class="message other-message float-right">
-              Why, thank you! Lola has not only beautiful eyes but also an amazing fur! <br> When would you be available to have our dogs meet?
-            </div>
-          </li>
-
-          <li>
-            <div class="message-data">
-              <span class="message-data-name"><i class="fa fa-circle online"></i> Me</span>
-              <span class="message-data-time">10:20 AM, Today</span>
-            </div>
-            <div class="message my-message">
-              Thank you! We should defenitely meet this weekend, as Lola is currently in heat!
-            </div>
-          </li>
-
-        </ul>
-
-      </div> <!-- end chat-history -->
-
       <div class="chat-message clearfix">
         <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
 
