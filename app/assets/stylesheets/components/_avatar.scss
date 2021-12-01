@@ -14,6 +14,17 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   object-fit: cover;
 }
+
+.avatar-large-round {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  vertical-align: top;
+  // border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
@@ -29,4 +40,12 @@
 
 .not-selected {
   opacity: 0.6;
+}
+
+.pic-in-pic {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 2px solid #dfe2ec;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }

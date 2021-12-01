@@ -33,44 +33,40 @@
 <%#= link_to "Back", :back %>
 
 <%#= link_to "My Matches", matches_path %>
-<div class="mb-5 mt-5">
-  <div class="container text-center"><h5>PROFILE</h5></div>
-  <br>
-  <div class="container text-center">
+
+<div class="container text-center wrapper">
+  <h5 class="mt-5">PROFILE</h5>
+  <div class="position-relative m-auto" style="width:150px">
     <% if current_dog.id != nil %>
-      <%= cl_image_tag current_dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
+      <%= image_tag 'https://avatars.githubusercontent.com/u/87486049?v=4', class: "avatar-large-round", alt: "avatar-large" %>
     <% end %>
-    <div>
     <% if current_dog %>
-      <h4><%= current_dog.name %></h4>
+      <%= cl_image_tag current_dog.photo.key, class: "avatar pic-in-pic" %>
+  </div>
+      <h4>Selected doggo: <%= current_dog.name %></h4>
     <% else %>
-      <h4><%= current_user.name %></h4>
+      <h4>Marco</h4>
     <% end %>
-      <h6>Select a dog</h6>
-      <% current_user.dogs.each do |dog| %>
-        <%= link_to new_dog_session_path(dog_id: dog.id), method: :post do %>
-          <%= cl_image_tag dog.photo.key, class: "avatar-large", alt: "avatar-large" %>
-        <% end %>
-      <% end %>
-      <h4>Selected dog: <%= current_dog.name %></h4>
-  </div>
+    <% @user.dogs.count == 1 ? s = '' : s = 's' %>
+  <%= link_to raw("<div class='container'>
+    <div class='card_pending'>
+      <div class='card-product-infos'>
+        <h5>My doggos</h5>
+        <p>You have #{@user.dogs.count} doggo#{s}.</p>
+      </div>
+    </div>
+  </div>"), dogs_profile_path(@user) %>
+  <% @user.dogs.first.matches.count == 1 ? s = '' : s = 's' %>
+  <%= link_to raw("<div class='container'>
+    <div class='card_pending' style='margin-bottom: 85px'>
+      <div class='card-product-infos'>
+        <h5>My requests</h5>
+        <p>You have #{@user.dogs.first.matches.count} dog#{s} currently matched.</p>
+      </div>
+    </div>
+  </div>"), matches_path %>
 </div>
-<br>
-<%= link_to raw("<div class='container'>
-  <div class='card-product'>
-    <div class='card-product-infos'>
-      <h5>My doggos</h5>
-      <p>You have #{@user.dogs.count} doggos currently in your page.</p>
-    </div>
-  </div>
-</div>"), dogs_profile_path(@user) %>
-<br>
-<%= link_to raw("<div class='container'>
-  <div class='card-product' style='margin-bottom: 85px'>
-    <div class='card-product-infos'>
-      <h5>My requests</h5>
-      <p>You have #{@user.dogs.first.matches.count} dogs currently matched.</p>
-    </div>
-  </div>
-</div>"), matches_path %>
-<%= link_to "log-out", destroy_user_session_path, method: :delete %>
+<div class="menu">
+  <%= link_to "log-out", destroy_user_session_path, method: :delete %>
+  <i class="fas fa-bars"></i>
+</div>
