@@ -30,8 +30,10 @@ import { initTab } from '../components/initTab';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 // import { formatBreed } from '../components/format_breed';
 import { initShow } from "../components/initShow";
+import { initAnimation } from '../components/init_animation';
 
 document.addEventListener('turbolinks:load', () => {
+  initAnimation();
   initTab();
   initMapbox();
   initSlide();

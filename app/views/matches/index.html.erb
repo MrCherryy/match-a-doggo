@@ -20,9 +20,13 @@
                     <%= link_to dog_path(match.matched_dog) do %>
                       <i class="fas fa-info-circle icon-match"></i>
                     <% end %>
-                    <%= link_to stylesheets_dogs_show_path do %>
-                      <i class="far fa-comment-dots icon-match"></i>
+                    <% if match.status == "accepted" %>
+                      <%= link_to stylesheets_dogs_show_path do %>
+                        <i class="far fa-comment-dots icon-match"></i>
                       <% end %>
+                    <% else %>
+                        <i class="far fa-comment-dots icon-disabled"></i>
+                    <% end %>
                   </div>
                 </div>
               </div>
@@ -40,21 +44,29 @@
                    <%= cl_image_tag match.matching_dog.photo.key, class: "matched_avatar_dog dogs_avatars_match", alt: "avatar-large" %>
                 </div>
                 <div class="status_container_review">
-                  <% if match.status == 'pending'  %>
-                    <div class="accept_reject_container">
+                  <div class="accept_reject_container">
+                    <% if match.status == 'pending'  %>
                       <%= link_to deny_match_path(match), class: "r-match" do %>
                         <i class="fas fa-times-circle"></i>
                       <% end %>
                       <%= link_to accept_match_path(match), class: "a-match" do %>
                         <i class="fa fa-check-circle"></i>
                       <% end %>
-                    </div>
-                  <% end %>
+                    <% else %>
+                      <p>Chat with <%= match.matching_dog.name %></p>
+                    <% end %>
+                  </div>
                   <div class="buttons_reviews_container">
                     <%= link_to dog_path(match.matching_dog) do %>
                       <i class="fas fa-info-circle icon-match"></i>
                     <% end %>
-                                          <i class="far fa-comment-dots icon-match"></i>
+                    <% if match.status == "accepted" %>
+                      <%= link_to stylesheets_dogs_show_path do %>
+                        <i class="far fa-comment-dots icon-match"></i>
+                      <% end %>
+                    <% else %>
+                        <i class="far fa-comment-dots icon-disabled"></i>
+                    <% end %>
                   </div>
                 </div>
               </div>
