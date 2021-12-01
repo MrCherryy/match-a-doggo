@@ -1,4 +1,3 @@
-
 const showIt = () => {
   const menu = document.querySelector('.fa-bars');
   const logOuts = document.querySelectorAll('.log-out');
