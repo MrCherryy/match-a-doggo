@@ -1,5 +1,5 @@
 
-const showIt = (event) => {
+const showIt = () => {
   const menu = document.querySelector('.fa-bars');
   const logOut = document.querySelector('.log-out');
   logOut.classList.toggle('hide');
