@@ -44,5 +44,103 @@
     outline: none;
     cursor: pointer;
     font-family: Varela Round;
+    text-align: center;
   }
+}
+
+.splashscreen {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white !important;
+}
+
+.splashscreen img {
+    height: 250px;
+    width: auto;
+}
+
+@keyframes pulse {
+  0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+      -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+      -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes opacity {
+    100% {
+        opacity: 0%;
+    }
+}
+
+@-webkit-keyframes opacity {
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes opacityin {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Slide In */
+
+// #main-logo {
+//     position: relative;
+//     left: -200%;
+//     animation: slide 2s forwards;
+//     animation-delay: 1s;
+// }
+
+#main-logo {
+  position: relative;
+  animation: fadeOut 2s;
+  animation: pulse 1.5s linear 2 forwards;
+  opacity: 1;
+  // animation-delay: 1s;
+}
+
+/* Opacity Out */
+
+.transition {
+    animation: opacity 1s;
+    animation-delay: 0s;
+}
+
+
+/* Opacity In */
+
+.transition-in {
+    animation: opacityin 2s;
+    animation-delay: 0s;
 }

@@ -28,8 +28,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { initSlide } from "../components/initslide.js";
 import { initTab } from '../components/initTab';
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { initAnimation } from '../components/init_animation';
 
 document.addEventListener('turbolinks:load', () => {
+  initAnimation();
   initTab();
   initMapbox();
   initSlide();
