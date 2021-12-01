@@ -41,10 +41,10 @@
       <%= image_tag 'https://avatars.githubusercontent.com/u/87486049?v=4', class: "avatar-large-round", alt: "avatar-large" %>
       <%= cl_image_tag current_dog.photo.key, class: "avatar pic-in-pic" %>
   </div>
-    <h4>Selected doggo: <%= current_dog.name %></h4>
+    <h4 class="mb-4">Selected doggo: <%= current_dog.name %></h4>
   <% else %>
     <%= image_tag 'https://avatars.githubusercontent.com/u/87486049?v=4', class: "avatar-large-round position-relative m-auto", alt: "avatar-large" %>
-    <h4>Marco</h4>
+    <h4 class="mb-4">Marco</h4>
   <% end %>
     <% @user.dogs.count == 1 ? s = '' : s = 's' %>
   <%= link_to raw("<div class='container'>
