@@ -36,17 +36,16 @@
 
 <div class="container text-center wrapper">
   <h5 class="mt-5">PROFILE</h5>
+  <% if current_dog.id != nil %>
   <div class="position-relative m-auto" style="width:150px">
-    <% if current_dog.id != nil %>
       <%= image_tag 'https://avatars.githubusercontent.com/u/87486049?v=4', class: "avatar-large-round", alt: "avatar-large" %>
-    <% end %>
-    <% if current_dog %>
       <%= cl_image_tag current_dog.photo.key, class: "avatar pic-in-pic" %>
   </div>
-      <h4>Selected doggo: <%= current_dog.name %></h4>
-    <% else %>
-      <h4>Marco</h4>
-    <% end %>
+    <h4>Selected doggo: <%= current_dog.name %></h4>
+  <% else %>
+    <%= image_tag 'https://avatars.githubusercontent.com/u/87486049?v=4', class: "avatar-large-round position-relative m-auto", alt: "avatar-large" %>
+    <h4>Marco</h4>
+  <% end %>
     <% @user.dogs.count == 1 ? s = '' : s = 's' %>
   <%= link_to raw("<div class='container'>
     <div class='card_pending'>
