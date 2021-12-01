@@ -67,6 +67,11 @@
   </div>"), matches_path %>
 </div>
 <div class="menu">
-  <%= link_to "log-out", destroy_user_session_path, method: :delete, class:'log-out' %>
   <i class="fas fa-bars"></i>
+  <div class="log-out">
+    <div class="dropdown">
+      <span class="log-out"><%= link_to "log-out", destroy_user_session_path, method: :delete %></span>
+      <span class="log-out"><%= link_to "settings", '#' %></span>
+    </div>
+  </div>
 </div>

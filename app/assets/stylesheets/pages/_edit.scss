@@ -8,14 +8,21 @@
   display: none;
 }
 
-.log-out {
+.dropdown a {
+  color: #303030;
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   padding: 8px;
   box-shadow: #d1d1d1 1px 1px 4px;
   border-radius: 10px;
-  position: absolute;
-  top: 20px;
-  right: 10px;
   width: max-content;
   color: #303030;
 }
