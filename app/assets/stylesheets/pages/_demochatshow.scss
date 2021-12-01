@@ -129,14 +129,14 @@
         width: 0;
         position: absolute;
         pointer-events: none;
-        border-bottom-color: $green;
+        border-bottom-color: #25d3668a;
         border-width: 10px;
         margin-left: -10px;
       }
     }
 
     .my-message {
-      background: $green;
+      background: #25d3668a;
     }
 
     .other-message {
@@ -196,7 +196,7 @@
   }
 
 .online {
-  color: $green;
+  color: #25d3668a;
 }
 
 .offline {
@@ -204,7 +204,7 @@
 }
 
 .me {
-  color: $blue;
+  color: #25d3668a;
 }
 
 .align-left {
