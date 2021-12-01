@@ -11,10 +11,11 @@ const buildMap = (mapElement) => {
 };
 
 const addMarkerToMap = (map, marker) => {
-    new mapboxgl.Marker()
+  new mapboxgl.Marker({ offset: [0, -50 / 2] })
       .setLngLat([marker.lng, marker.lat])
       .addTo(map);
 };
+
 
 const fitMapToMarker = (map, marker) => {
   const bounds = new mapboxgl.LngLatBounds();
