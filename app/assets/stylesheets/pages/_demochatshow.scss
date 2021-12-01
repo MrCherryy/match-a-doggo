@@ -70,6 +70,8 @@
   .chat-header {
     padding: 20px;
     border-bottom: 2px solid white;
+    position: absolute;
+    right: 5%;
 
     img {
       float: left;
@@ -96,6 +98,8 @@
     border-bottom: 2px solid white;
     overflow-y: scroll;
     height: 600px;
+    position: absolute;
+    top: 10%;
 
     .message-data {
       margin-bottom: 15px;
@@ -157,7 +161,9 @@
       margin-bottom: 10px;
       border-radius: 5px;
       resize: none;
-
+      position: fixed;
+      bottom: 45px;
+      left: 0px
     }
 
     .fa-file-o, .fa-file-image-o {
