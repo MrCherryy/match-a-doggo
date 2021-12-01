@@ -28,7 +28,8 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { initSlide } from "../components/initslide.js";
 import { initTab } from '../components/initTab';
 import { initAutocomplete } from '../plugins/init_autocomplete';
-import { formatBreed } from '../components/format_breed';
+// import { formatBreed } from '../components/format_breed';
+import { initShow } from "../components/initShow";
 
 document.addEventListener('turbolinks:load', () => {
   initTab();
@@ -37,5 +38,6 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
   initSelect2();
   initAutocomplete();
-  formatBreed();
+  // formatBreed();
+  initShow();
 });
