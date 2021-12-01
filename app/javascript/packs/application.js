@@ -28,9 +28,11 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { initSlide } from "../components/initslide.js";
 import { initTab } from '../components/initTab';
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { initAnimation } from '../components/init_animation';
 import { formatBreed } from '../components/format_breed';
 
 document.addEventListener('turbolinks:load', () => {
+  initAnimation();
   initTab();
   initMapbox();
   initSlide();

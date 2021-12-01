@@ -1,13 +1,19 @@
-<div id="bg_home">
+ <div class="splashscreen">
+  <div id="main-logo">
+    <%= image_tag("logo.png") %>
+  </div>
+</div>
+<div id="bg_home" class="homepage d-none">
   <div class="banner">
-  <h1>Match-a-Doggo</h1>
-  <p>We make <strong>your match</strong> and let the <strong>dogs do the rest</strong><strong></strong>!</p>
+    <h1>Match-a-Doggo</h1>
+    <p>We make <strong>your match</strong> and let the <strong>dogs do the rest</strong><strong></strong>!</p>
   </div>
   <div id="btn_landing">
-  <% if current_user %>
-    <%= link_to 'Get Started', dogs_profile_path(current_user), class: "btn_start" %>
-  <% else %>
-    <%= link_to 'Log in',  new_user_session_path, class: "btn_start"  %>
-    <%= link_to 'Sign up',  new_user_registration_path, class: "btn_start"  %>
-  <% end %>
+    <% if current_user %>
+      <%= link_to 'Get Started', dogs_profile_path(current_user), class: "btn_start" %>
+    <% else %>
+      <%= link_to 'Log in',  new_user_session_path, class: "btn_start"  %>
+      <%= link_to 'Sign up',  new_user_registration_path, class: "btn_start"  %>
+    <% end %>
   </div>
+</div>
