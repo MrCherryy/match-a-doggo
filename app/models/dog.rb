@@ -1,9 +1,10 @@
 class Dog < ApplicationRecord
   belongs_to :user
-  has_many :matches, dependent: :destroy
+  has_many :matches
   has_many :messages
   has_one_attached :photo
   before_save :default_matchable
+
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
@@ -19,7 +20,7 @@ class Dog < ApplicationRecord
              pinscher-miniature pitbull pointer-german pointer-germanlonghair pomeranian poodle-miniature poodle-standard
              poodle-toy pug puggle pyrenees redbone retriever-chesapeake retriever-curly retriever-flatcoated retriever-golden
              ridgeback-rhodesian rottweiler saluki samoyed schipperke schnauzer-giant schnauzer-miniature setter-english
-             setter-gordon setter-irish sheepdogenglish shetland shiba shihtzu spaniel-blenheim spaniel-brittany spaniel-cocker
+             setter-gordon setter-irish sheepdog-english sheepdog-shetland shiba shihtzu spaniel-blenheim spaniel-brittany spaniel-cocker
              spaniel-irish spaniel-japanese spaniel-sussex spaniel-welsh springer-english stbernard terrier-american
              terrier-australian terrier-bedlington terrier-border terrier-cairn terrier-dandie terrier-fox terrier-irish
              terrier-kerryblue terrier-lakeland terrier-norfolk terrier-norwich terrier-patterdale terrier-russell terrier-scottish

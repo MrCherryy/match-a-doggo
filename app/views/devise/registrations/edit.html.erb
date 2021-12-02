@@ -1,4 +1,4 @@
-<div class="settings none">
+<%# <div class="d-none"> %>
   <%#= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%#= f.error_notification %>
 
@@ -29,16 +29,14 @@
 
   <%# <h3>Cancel my account</h3> %>
 
-  <%# <p>Unhappy? = link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete</p> %>
+   <%# <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete </p>%>
 
   <%#= link_to "Back", :back %>
-
-  <%#= link_to "My Matches", matches_path %>
-</div>
+<%# </div> %>
+<div class="profile-container">
 <div class="container text-center wrapper">
-  <h5 class="mt-5">PROFILE</h5>
   <% if current_dog.id != nil %>
-  <div class="position-relative m-auto" style="width:150px">
+  <div class="position-relative avatar-user-container">
       <%= image_tag 'https://avatars.githubusercontent.com/u/87486049?v=4', class: "avatar-large-round", alt: "avatar-large" %>
       <%= cl_image_tag current_dog.photo.key, class: "avatar pic-in-pic" %>
   </div>
@@ -68,11 +66,10 @@
   </div>"), matches_path %>
 </div>
 <div class="menu">
-  <i class="fas fa-bars"></i>
-  <div class="log-out">
-    <div class="dropdown">
-      <span class="log-out"><%= link_to "log-out", destroy_user_session_path, method: :delete %></span>
-      <span class="log-out"><%= link_to "settings", '#' %></span>
-    </div>
+  <i class="fas fa-cog"></i>
+  <div class="dropdown d-none">
+    <span><%= link_to "log-out", destroy_user_session_path, method: :delete %></span>
+    <span><%= link_to "settings", '#' %></span>
   </div>
+</div>
 </div>
