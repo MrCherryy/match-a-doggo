@@ -13,9 +13,9 @@
       <h5>Address: <%= @dog.address %></h5>
       <h5>Breed: <%= @dog.breed %></h5>
       <h5>Age: <%= @dog.age[:year] %> years and <%= @dog.age[:month] %> months</h5>
-        <% @dog.pedigree ? x = "✅" : x = "🔆" %>
+        <% @dog.pedigree ? x = "✅" : x = "❌" %>
       <h5>Pedigree: <%= "#{x}" %></h5>
-      <% @dog.gender == "male" ? a = "🚹" : a = "🚺" %>
+      <% @dog.gender == "male" ? a = "🐶 🚹" : a = "🐶 🚺" %>
       <h5>Gender: <%= "#{a}" %></h5>
     </div>
     <div class="dog-description">

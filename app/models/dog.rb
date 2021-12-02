@@ -1,9 +1,10 @@
 class Dog < ApplicationRecord
   belongs_to :user
-  has_many :matches, dependent: :destroy
+  has_many :matches
   has_many :messages
   has_one_attached :photo
   before_save :default_matchable
+
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
