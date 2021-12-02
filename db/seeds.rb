@@ -164,6 +164,7 @@ dog.save!
 
 dog = Dog.new(name: 'Rio', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via Gallarate 2, Milan',
               user: user5, matchable: true, birthdate: '2020/11/29')
+
 file = URI.open('https://images.unsplash.com/photo-1630421535202-1ed447487a72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!

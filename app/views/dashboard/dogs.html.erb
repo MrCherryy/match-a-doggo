@@ -17,6 +17,7 @@
         <h2><%= dog.name %></h2>
         <div>
           <%= link_to raw('<i class="fas fa-pen"></i>'), edit_dog_path(dog), class: 'edit-pen' %>
+          <%= link_to raw('<i class="fas fa-info-circle"></i>'), dog_path(dog), class: 'info-icon sessions' %>
         </div>
       </div>
     <% end %>
