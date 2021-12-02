@@ -3,7 +3,8 @@
           <% if current_user %>
       <%= link_to "#", class: "dashboard-icon" do %>
         <% if current_dog.id != nil %>
-          <%= cl_image_tag current_dog.photo.key, class: "avatar", alt: "avatar-large" %>
+          <%= image_tag 'https://avatars.githubusercontent.com/u/90670859?v=4', class: "avatar", alt: "avatar-large" %>
+          <%= image_tag 'https://images.unsplash.com/photo-1575904210356-3075648bafb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80', class: "avatar d", alt: "avatar-large" %>
         <% else %>
           <%= image_tag(('MaDLogo.png'), :class => "avatar-logo") %>
         <% end %>
@@ -11,8 +12,8 @@
     <% end %>
 
         <div class="chat-about">
-          <div class="chat-with">Chat with Lola's owner, Chiara</div>
-          <div class="chat-num-messages">You matched on November the 30th!</div>
+          <div class="chat-with">Chat with Dax's owner, Salvo</div>
+          <div class="chat-num-messages">You matched on December the 3rd!</div>
         </div>
       </div> <!-- end chat-header -->
 
@@ -25,13 +26,13 @@
 
             </div>
             <div class="message other-message float-right">
-              Hey Chiara,<br> just wanted to text you ASAP! <br> We matched our dogs!<br>
+              Hey Salvo,<br> just wanted to text you ASAP! <br> We matched our dogs!<br>
             </div>
           </li>
 
           <li>
             <div class="message-data">
-              <span class="message-data-name"><i class="fa fa-circle online"></i> Chiara</span>
+              <span class="message-data-name"><i class="fa fa-circle online"></i> Salvo</span>
               <span class="message-data-time">10:12 AM, Today</span>
             </div>
             <div class="message my-message">

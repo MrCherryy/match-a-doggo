@@ -5,6 +5,18 @@
   object-fit: cover;
   vertical-align: unset;
 }
+
+.d {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: unset;
+  left: 50px;
+  top: 50px;
+  position: absolute;
+}
+
 .avatar-large {
   width: 150px;
   height: 150px;
