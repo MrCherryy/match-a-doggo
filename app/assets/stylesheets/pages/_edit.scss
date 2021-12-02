@@ -1,18 +1,21 @@
 .menu {
   position: absolute;
-  top: 6%;
-  right: 8%;
+  top: 8%;
+  right: 27%;
+  i {
+    font-size: 30px;
+  }
 }
 
 .dropdown a {
   color: #303030;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .dropdown {
   position: absolute;
-  top: 20px;
-  right: 10px;
+  top: 28px;
+  left: 20px;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -21,4 +24,14 @@
   border-radius: 10px;
   width: max-content;
   color: #303030;
+  span {
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+}
+
+.avatar-user-container {
+  margin: auto;
+  margin-bottom: 30px;
+  width: 150px;
 }

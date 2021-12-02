@@ -1,45 +1,42 @@
-<div class="settings d-none">
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= f.error_notification %>
+<%# <div class="d-none"> %>
+  <%#= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%#= f.error_notification %>
 
-    <div class="form-inputs">
-      <%= f.input :email, required: true, autofocus: true %>
+    <%# <div class="form-inputs"> %>
+      <%#= f.input :email, required: true, autofocus: true %>
 
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <p>Currently waiting confirmation for: = resource.unconfirmed_email</p>
-      <% end %>
+      <%# if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <%# <p>Currently waiting confirmation for: = resource.unconfirmed_email</p> %>
+      <%# end %>
 
-      <%= f.input :password,
+      <%#= f.input :password,
                   hint: "leave it blank if you don't want to change it",
                   required: false,
                   input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
+      <%#= f.input :password_confirmation,
                   required: false,
                   input_html: { autocomplete: "new-password" } %>
-      <%= f.input :current_password,
+      <%#= f.input :current_password,
                   hint: "we need your current password to confirm your changes",
                   required: true,
                   input_html: { autocomplete: "current-password" } %>
-    </div>
+    <%# </div> %>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Update" %>
-    </div>
-  <% end %>
+    <%# <div class="form-actions"> %>
+      <%#= f.button :submit, "Update" %>
+    <%# </div> %>
+  <%# end %>
 
-  <h3>Cancel my account</h3>
+  <%# <h3>Cancel my account</h3> %>
 
-   <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+   <%# <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete </p>%>
 
-  <%= link_to "Back", :back %>
-
-  <%= link_to "My Matches", matches_path %>
-</div>
+  <%#= link_to "Back", :back %>
+<%# </div> %>
 <div class="profile-container">
 <div class="container text-center wrapper">
-  <h5 class="mt-5">PROFILE</h5>
   <% if current_dog.id != nil %>
-  <div class="position-relative m-auto" style="width:150px">
+  <div class="position-relative avatar-user-container">
       <%= image_tag 'https://avatars.githubusercontent.com/u/87486049?v=4', class: "avatar-large-round", alt: "avatar-large" %>
       <%= cl_image_tag current_dog.photo.key, class: "avatar pic-in-pic" %>
   </div>
@@ -69,12 +66,10 @@
   </div>"), matches_path %>
 </div>
 <div class="menu">
-  <i class="fas fa-bars"></i>
-
-    <div class="dropdown d-none">
-      <span><%= link_to "log-out", destroy_user_session_path, method: :delete %></span>
-      <span class="s"><%= link_to "settings", '#' %></span>
-    </div>
-
+  <i class="fas fa-cog"></i>
+  <div class="dropdown d-none">
+    <span><%= link_to "log-out", destroy_user_session_path, method: :delete %></span>
+    <span><%= link_to "settings", '#' %></span>
+  </div>
 </div>
 </div>

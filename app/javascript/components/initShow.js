@@ -1,17 +1,14 @@
-const menu = document.querySelector('.fa-bars');
-const dropdown = document.querySelector('.dropdown');
-
-const showIt = () => {
-  if (menu) {
-    menu.addEventListener('click', () => {
-      dropdown.classList.toggle('d-none');
-    });
-  }
+const showIt = (target, drop) => {
+  target.addEventListener('click', () => {
+    drop.classList.toggle('d-none');
+  });
 };
 
 const initShow = () => {
-  if (dropdown) {
-    showIt();
+  const menu = document.querySelector('.fa-cog');
+  const dropdown = document.querySelector('.dropdown');
+  if (menu) {
+    showIt(menu, dropdown);
   }
 };
 
