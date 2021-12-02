@@ -2,7 +2,7 @@
   <div class="card-img-show", style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)), url('<%= cl_image_path(@dog.photo.key)%>')">
     <h2><%= @dog.name %></h2>
     <div class="back-button">
-      <%= link_to :back do %>
+      <%= link_to 'javascript:history.back()' do %>
         <i class="fas fa-chevron-circle-left"></i>
       <% end %>
     </div>
