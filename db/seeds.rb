@@ -162,7 +162,7 @@ dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png
 dog.save!
 
 dog = Dog.new(name: 'Rio', breed: 'spaniel-cocker', gender: 'male', pedigree: true, address: 'Via GALLARATE 2, Milan',
-              user: user5, matchable: true, birthdate: '2021/11/29')
+              user: user5, matchable: true, birthdate: '2021/03/29')
 file = URI.open('https://images.unsplash.com/photo-1630421535202-1ed447487a72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
@@ -211,13 +211,13 @@ dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png
 dog.save!
 
 dog = Dog.new(name: 'Venus', breed: 'husky', gender: 'female', pedigree: true, address: 'Via FLAVIA, Milan',
-              user: user5, matchable: true, birthdate: '2020/11/21')
+              user: user5, matchable: true, birthdate: '2020/04/21')
 file = URI.open('https://images.unsplash.com/photo-1605568427561-40dd23c2acea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
 
 dog = Dog.new(name: 'Polly', breed: 'husky', gender: 'female', pedigree: true, address: 'Via PESARO, Milan',
-              user: user6, matchable: true, birthdate: '2021/12/11')
+              user: user6, matchable: true, birthdate: '2021/08/11')
 file = URI.open('https://images.unsplash.com/photo-1577920613552-1de9821340cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!
@@ -266,7 +266,7 @@ dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png
 dog.save!
 
 dog = Dog.new(name: 'Lampo', breed: 'husky', gender: 'male', pedigree: true, address: 'Via SAN FERMO, Milan',
-              user: user6, matchable: true, birthdate: '2021/12/01')
+              user: user6, matchable: true, birthdate: '2021/10/01')
 file = URI.open('https://images.unsplash.com/photo-1616568799337-3d7e0ab9caf8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80')
 dog.photo.attach(io: file, filename: "#{dog.name}.png", content_type: 'image/png')
 dog.save!

@@ -16,9 +16,26 @@
 }
 
 .active-icon {
-  border-top: rgba(243, 191, 93, 0.712) solid 2px;
   i {
     color: rgba(243, 191, 93, 0.712);
+  }
+}
+
+.notification-r {
+  position: absolute;
+  bottom: 30px;
+  right: 25px;
+  background-color: #fa4747;
+  border-radius: 50%;
+  max-width: 20px;
+  max-height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  p {
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
   }
 }
 

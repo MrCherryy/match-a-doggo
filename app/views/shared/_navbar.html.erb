@@ -18,6 +18,11 @@
     <div class="matches-icon <%= active_class(matches_path)%>">
       <%= link_to matches_path, class: "matches-page-icon" do %>
         <i class="far fa-comments"></i>
+        <% if Match.where(matched_dog: Dog.find_by(name: current_dog.name)).where(status: "pending").count != 0 %>
+          <div class="notification-r">
+            <p><%= Match.where(matched_dog: Dog.find_by(name: current_dog.name)).where(status: "pending").count%></p>
+          </div>
+        <% end %>
       <% end %>
     </div>
 </div>
