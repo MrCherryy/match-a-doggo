@@ -1,19 +1,18 @@
+const menu = document.querySelector('.fa-bars');
+const dropdown = document.querySelector('.dropdown');
+
 const showIt = () => {
-  const menu = document.querySelector('.fa-bars');
-  const logOuts = document.querySelectorAll('.log-out');
-
-  logOuts.forEach((logOut) => {
-    logOut.classList.toggle('hide');
-  });
-
   if (menu) {
-  menu.addEventListener('click', showIt);
+    menu.addEventListener('click', () => {
+      dropdown.classList.toggle('d-none');
+    });
   }
 };
 
-
 const initShow = () => {
-  showIt();
+  if (dropdown) {
+    showIt();
+  }
 };
 
 export { initShow };
