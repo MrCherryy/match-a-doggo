@@ -55,14 +55,20 @@
   p.pending {
     border-color: $yellow;
     background-color: $yellow;
+    width: 127px;
+    text-align: center;
   }
   p.accepted {
     border-color: $green;
     background-color: $green;
+    width: 127px;
+    text-align: center;
   }
   p.denied {
     border-color: $red;
     background-color: $red;
+    width: 127px;
+    text-align: center;
   }
 }
 
